@@ -6,6 +6,7 @@
 - `react-router-dom`
 - `styled-components`
 - `styled-reset`
+- `@material-ui/icons`
 
 ## Server
 
