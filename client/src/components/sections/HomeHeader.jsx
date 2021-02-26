@@ -13,15 +13,13 @@ export default function HomeHeader() {
 }
 
 const Container = styled.header`
-	background-color: ${({ theme }) => theme.colors.white};
+	background-color: var(--color-background);
 	width: 100%;
 	height: 150px;
 	display: flex;
-	padding: ${({ theme }) => theme.paddings.sm}
-		${({ theme }) => theme.paddings.laptop};
-	@media ${({ theme }) => theme.device.mobile} {
-		padding: ${({ theme }) => theme.paddings.sm}
-			${({ theme }) => theme.paddings.mobile};
+	padding: var(--padding-sm) var(--padding-laptop);
+	@media screen and (max-width: var(--device-mobile)) {
+		padding: var(--padding-sm) var(--padding-mobile);
 	}
 `;
 

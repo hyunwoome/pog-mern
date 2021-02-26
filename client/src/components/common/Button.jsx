@@ -15,5 +15,5 @@ const ButtonComponent = styled.button`
 	border: 0;
 	border-radius: 5px;
 	box-shadow: 0px 1px 3px -1px gray;
-	font-size: 0.875rem;
+	font-size: var(--font-button);
 `;
