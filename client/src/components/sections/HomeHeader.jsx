@@ -25,10 +25,10 @@ export default function HomeHeader() {
 const Container = styled.header`
 	background-color: var(--color-background);
 	width: 100%;
-	height: 112px;
-	padding: var(--padding-sm) var(--padding-laptop);
+	height: 98px;
+	padding: var(--padding-sm) var(--padding-laptop) 0px var(--padding-laptop);
 	@media screen and (max-width: 600px) {
-		padding: var(--padding-sm) var(--padding-mobile);
+		padding: var(--padding-sm) var(--padding-mobile) 0px var(--padding-mobile);
 	}
 	display: flex;
 	flex-direction: column;

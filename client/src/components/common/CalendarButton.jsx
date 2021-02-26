@@ -13,7 +13,7 @@ export default function CalendarButton() {
 		<Container>
 			<CalButton onClick={pushButton}>
 				내가찾는 해외골프
-				<SearchRoundedIcon />
+				<SearchRoundedIcon style={{ color: 'black' }} />
 			</CalButton>
 		</Container>
 	);
