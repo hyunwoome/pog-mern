@@ -22,6 +22,9 @@ export const GlobalStyles = createGlobalStyle`
     // ! Colors
     --color-background-base: #f2f2f2;
     --color-background: #fff;
+    --color-button-default: #e0e0e0;
+    --color-button-primary: #2296f2;
+    --color-button-secondary:#ff81aa;
 
     // ! Paddings
     --padding-sm: 0.875rem;
