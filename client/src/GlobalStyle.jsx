@@ -18,11 +18,13 @@ export const GlobalStyles = createGlobalStyle`
 
     // ! Font
     --font-button: 0.875rem;
+    --font-sm: 0.75rem; 
 
     // ! Colors
     --color-background-base: #f2f2f2;
     --color-background: #fff;
-    --color-button-default: #e0e0e0;
+    --color-border: #e6e6e6;
+    --color-button-default: #707070;
     --color-button-primary: #2296f2;
     --color-button-secondary:#ff81aa;
 
