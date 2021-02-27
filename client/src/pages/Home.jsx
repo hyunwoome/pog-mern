@@ -1,13 +1,13 @@
 import BaseContainer from '../components/containers/BaseContainer';
 import HomeHeader from '../components/sections/HomeHeader';
-import ProductTabs from '../components/common/ProductTabs';
+import TopTabs from '../components/common/TopTabs';
 
 export default function Home() {
 	return (
 		<>
 			<BaseContainer>
 				<HomeHeader />
-				<ProductTabs />
+				<TopTabs />
 			</BaseContainer>
 		</>
 	);

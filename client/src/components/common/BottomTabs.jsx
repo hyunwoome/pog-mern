@@ -29,7 +29,9 @@ export default function BottomTabs() {
 			href: '/account',
 		},
 	];
-	const [active, setActive] = useState(true);
+
+	// ! 초기상태 Error
+	const [active, setActive] = useState();
 
 	return (
 		<Container>
