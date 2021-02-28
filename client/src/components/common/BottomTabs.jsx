@@ -30,8 +30,7 @@ export default function BottomTabs() {
 		},
 	];
 
-	// ! 초기상태 Error
-	const [active, setActive] = useState();
+	const [active, setActive] = useState(tabTitle[0].title);
 
 	return (
 		<Container>

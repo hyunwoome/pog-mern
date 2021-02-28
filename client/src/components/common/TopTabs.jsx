@@ -22,8 +22,8 @@ export default function TopTabs() {
 				{product.map((title) => (
 					<List key={title}>
 						<ActiveButton
-							active={active === title}
 							onClick={() => setActive(title)}
+							active={active === title}
 						>
 							{title}
 						</ActiveButton>
