@@ -6,7 +6,7 @@ import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function BottomTabs() {
+export default function BottomNav() {
 	const tabTitle = [
 		{
 			title: '홈',
@@ -81,7 +81,7 @@ const List = styled.li`
 	${({ active }) =>
 		active &&
 		`
-    color: var(--color-button-secondary);
+    color: var(--color-button-primary);
   `}
 `;
 

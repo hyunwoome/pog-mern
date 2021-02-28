@@ -27,6 +27,7 @@ export default function TopTabs() {
 						>
 							{title}
 						</ActiveButton>
+						<TabIndicator active={active === title} />
 					</List>
 				))}
 			</UnList>
@@ -51,9 +52,9 @@ const UnList = styled.ul`
 `;
 
 const List = styled.li`
-	width: 80px;
 	height: 100%;
 	flex-shrink: 0;
+	position: relative;
 `;
 
 const Button = styled.button`
@@ -63,6 +64,7 @@ const Button = styled.button`
 	background-color: var(--color-background);
 	letter-spacing: 1px;
 	font-size: var(--font-button);
+	padding: 0 var(--padding-mobile);
 	cursor: pointer;
 	&:hover {
 		opacity: 0.7;
@@ -71,5 +73,17 @@ const Button = styled.button`
 
 const ActiveButton = styled(Button)`
 	color: var(--color-button-default);
-	${({ active }) => active && `color: var(--color-button-primary);`};
+	${({ active }) => active && `color: var(--color-button-secondary);`};
+`;
+
+const TabIndicator = styled.span`
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	${({ active }) =>
+		active && `background-color: var(--color-button-secondary);`}
 `;

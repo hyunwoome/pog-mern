@@ -4,7 +4,7 @@ import Login from './pages/Login';
 import Calendar from './pages/Calendar';
 import Menu from './pages/Menu';
 import Account from './pages/Account';
-import BottomTabs from './components/common/BottomTabs';
+import BottomNav from './components/common/BottomNav';
 
 function App() {
 	return (
@@ -14,7 +14,7 @@ function App() {
 			<Route path="/menu" exact component={Menu} />
 			<Route path="/account" exact component={Account} />
 			<Route path="/calendar" exact component={Calendar} />
-			<BottomTabs />
+			<BottomNav />
 		</>
 	);
 }
