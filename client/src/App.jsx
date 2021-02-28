@@ -5,6 +5,7 @@ import Calendar from './pages/Calendar';
 import Menu from './pages/Menu';
 import Account from './pages/Account';
 import BottomNav from './components/common/BottomNav';
+import Footer from './components/sections/Footer';
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<Route path="/menu" exact component={Menu} />
 			<Route path="/account" exact component={Account} />
 			<Route path="/calendar" exact component={Calendar} />
+			<Footer />
 			<BottomNav />
 		</>
 	);

@@ -27,6 +27,7 @@ export const GlobalStyles = createGlobalStyle`
     --color-button-default: #707070;
     --color-button-primary: #2296f2;
     --color-button-secondary:#ff81aa;
+    --color-font-gray: #666666;
 
     // ! Paddings
     --padding-sm: 0.875rem;

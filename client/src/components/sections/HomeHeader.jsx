@@ -46,7 +46,7 @@ const LogoContainer = styled.div``;
 
 const LogoText = styled.h3`
 	font-family: 'Racing Sans One', cursive;
-	font-size: 26px;
+	font-size: 24px;
 `;
 
 const ButtonContainer = styled.div`
