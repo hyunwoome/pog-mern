@@ -11,12 +11,14 @@ import Footer from './components/sections/Footer';
 function App() {
 	return (
 		<>
-			<Route path="/" exact component={Home} />
-			<Route path="/login" component={Login} />
-			<Route path="/menu" component={Menu} />
-			<Route path="/account" component={Account} />
-			<Route path="/calendar" component={Calendar} />
-			<Route component={NotFound} />
+			<Switch>
+				<Route path="/" exact component={Home} />
+				<Route path="/login" component={Login} />
+				<Route path="/menu" component={Menu} />
+				<Route path="/account" component={Account} />
+				<Route path="/calendar" component={Calendar} />
+				<Route component={NotFound} />
+			</Switch>
 			<BottomNav />
 			<Footer />
 		</>

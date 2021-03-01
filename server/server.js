@@ -1,13 +1,11 @@
 require('dotenv').config();
-
 const express = require('express');
 const mongoose = require('mongoose');
 const { MONGO_URI } = require('./config');
+const app = express();
 
 // Routes
 const postsRoutes = require('./routes/api/posts');
-
-const app = express();
 
 // BodyParser Middleware
 
@@ -26,8 +24,9 @@ mongoose
 // User routes
 app.use('/api/posts', postsRoutes);
 
-const PORT = process.env.PORT || 5000;
+// Connect to Server
 
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
 	console.log(`Server run at port ${PORT}`);
 });

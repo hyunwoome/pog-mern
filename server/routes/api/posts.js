@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+
 // Posts Model
 const Posts = require('../../models/Posts');
 
@@ -31,7 +32,6 @@ router.get('/:id', async (req, res) => {
 // @desc Create An post
 router.post('/', async (req, res) => {
 	const newPost = new Posts(req.body);
-
 	try {
 		const post = await newPost.save();
 		if (!post) throw Error('Something went wrong while saving the post');
