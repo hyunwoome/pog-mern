@@ -20,9 +20,9 @@ router.get('/', async (req, res) => {
 // @desc Get specific post
 router.get('/:id', async (req, res) => {
 	try {
-		const post = await Posts.findById(req.params.id);
-		if (!post) throw Error('No Items');
-		res.status(200).json(post);
+		const posts = await Posts.findById(req.params.id);
+		if (!posts) throw Error('No Items');
+		res.status(200).json(posts);
 	} catch (error) {
 		res.status(400).json({ message: error });
 	}

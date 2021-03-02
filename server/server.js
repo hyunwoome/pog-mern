@@ -1,15 +1,21 @@
-require('dotenv').config();
+// Import Module
 const express = require('express');
 const mongoose = require('mongoose');
+const multer = require('multer');
+
+require('dotenv').config();
 const { MONGO_URI } = require('./config');
+
 const app = express();
 
 // Routes
 const postsRoutes = require('./routes/api/posts');
+const productsRoutes = require('./routes/api/products');
 
-// BodyParser Middleware
+// Middleware
 
-app.use(express.json());
+app.use(express.json()); // BodyParser
+app.use('/uploads', express.static('uploads')); // Static
 
 // Connect to MongoDB Atlas
 mongoose
@@ -23,6 +29,7 @@ mongoose
 
 // User routes
 app.use('/api/posts', postsRoutes);
+app.use('/api/products', productsRoutes);
 
 // Connect to Server
 
