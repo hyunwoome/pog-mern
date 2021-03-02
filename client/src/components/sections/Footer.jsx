@@ -30,7 +30,18 @@ export default function Footer() {
 						</List>
 					))}
 				</UnList>
-				<ContentWrapper></ContentWrapper>
+				<ContentWrapper>
+					<Content>
+						(주)프라이드 오브 골프 · 대표: 김남윤 · 사업자등록번호: 110-30-25883
+						· 통신판매업신고 · 강남-1982호 · 메일: kny89@pog.com
+					</Content>
+					<Content>
+						관광사업자 등록번호: 제2021-89호 · 주소 : 서울시 강남구 테헤란로{' '}
+					</Content>
+					<Content>
+						Copyright 2021 PRIDE OF GOLF, &nbsp; All Right Reserved.
+					</Content>
+				</ContentWrapper>
 			</Wrapper>
 		</Container>
 	);
@@ -38,7 +49,10 @@ export default function Footer() {
 
 const Container = styled.footer`
 	width: 100%;
-	height: 220px;
+	height: 170px;
+	@media screen and (max-width: 600px) {
+		height: 200px;
+	}
 `;
 
 const Wrapper = styled.div`
@@ -61,7 +75,12 @@ const UnList = styled.ul`
 `;
 
 const List = styled.li`
-	margin-right: 16px;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
 `;
 
 const ContentWrapper = styled.div``;
+
+const Content = styled.p`
+	line-height: 1.5rem;
+`;
