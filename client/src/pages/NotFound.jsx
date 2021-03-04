@@ -6,4 +6,5 @@ export default function NotFound() {
 
 const Container = styled.div`
 	height: 90vh;
+	background-color: var(--color-background);
 `;
