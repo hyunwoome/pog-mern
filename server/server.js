@@ -9,8 +9,8 @@ const { MONGO_URI } = require('./config');
 const app = express();
 
 // Routes
-const postsRoutes = require('./routes/api/posts');
 const productsRoutes = require('./routes/api/products');
+const commentRoutes = require('./routes/api/comment');
 
 // Middleware
 
@@ -28,8 +28,8 @@ mongoose
 	.catch((error) => console.log(error));
 
 // User routes
-app.use('/api/posts', postsRoutes);
 app.use('/api/products', productsRoutes);
+app.use('/api/comment', commentRoutes);
 
 // Connect to Server
 

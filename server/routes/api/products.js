@@ -3,6 +3,9 @@ const multer = require('multer');
 const mongoose = require('mongoose');
 const Products = require('../../models/Products');
 
+/**
+ * @action UPLOAD Products Image
+ */
 const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
 		cb(null, './uploads/');
@@ -28,11 +31,17 @@ const upload = multer({
 
 const router = express.Router();
 
-// @routes GET api/products
-// @desc Get all products
+/**
+ * @action GET Products
+ * @route http://localhost:5000/api/products
+ * @method GET
+ */
 router.get('/', async (req, res) => {
 	try {
-		const products = await Products.find();
+		const products = await Products.find().populate({
+			path: 'commentPublished',
+			select: 'author content',
+		});
 		if (!products) throw Error('No Products');
 		res.status(200).json(products);
 	} catch (error) {
@@ -40,8 +49,11 @@ router.get('/', async (req, res) => {
 	}
 });
 
-// @routes GET api/products/:country
-// @desc Get country products
+/**
+ * @action GET Products from Country
+ * @route http://localhost:5000/api/products/:country
+ * @method GET
+ */
 router.get('/:country', async (req, res) => {
 	try {
 		const products = await Products.findById(req.params.country);
@@ -52,8 +64,11 @@ router.get('/:country', async (req, res) => {
 	}
 });
 
-// @routes GET api/products/:id
-// @desc Get specific products
+/**
+ * @action GET Product from ID
+ * @route http://localhost:5000/api/products/:id
+ * @method GET
+ */
 router.get('/:id', async (req, res) => {
 	try {
 		const product = await Products.findById(req.params.id);
@@ -64,14 +79,17 @@ router.get('/:id', async (req, res) => {
 	}
 });
 
-// @routes POST api/products
-// @desc Create An products
+/**
+ * @action ADD New Product
+ * @route http://localhost:5000/api/products
+ * @method POST
+ */
 router.post('/', upload.single('image'), async (req, res) => {
-	console.log(req.file);
 	const newProduct = new Products({
 		_id: new mongoose.Types.ObjectId(),
 		title: req.body.title,
-		image: req.file.path,
+		country: req.body.country,
+		// image: req.file.path,
 	});
 	try {
 		const product = await newProduct.save();
@@ -82,8 +100,11 @@ router.post('/', upload.single('image'), async (req, res) => {
 	}
 });
 
-// @routes DELETE api/products/:id
-// @desc Delete an post
+/**
+ * @action DELETE Product by ID
+ * @route http://localhost:5000/api/products/:id
+ * @method DELETE
+ */
 router.delete('/:id', async (req, res) => {
 	try {
 		const product = await Products.findByIdAndDelete(req.params.id);
@@ -94,8 +115,11 @@ router.delete('/:id', async (req, res) => {
 	}
 });
 
-// @routes UPDATE api/products/:id
-// @desc Update an product
+/**
+ * @action UPDATE Product by ID
+ * @route http://localhost:5000/api/products/:id
+ * @method UPDATE
+ */
 router.patch('/:id', async (req, res) => {
 	try {
 		const product = await product.findByIdAndUpdate(req.params.id, req.body);
