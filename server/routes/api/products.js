@@ -38,14 +38,11 @@ const router = express.Router();
  */
 router.get('/', async (req, res) => {
 	try {
-		const products = await Products.find().populate({
-			path: 'commentPublished',
-			select: 'author content',
-		});
+		const products = await Products.find().populate('comment');
 		if (!products) throw Error('No Products');
 		res.status(200).json(products);
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(400).json({ message: error.message });
 	}
 });
 
@@ -60,7 +57,7 @@ router.get('/:country', async (req, res) => {
 		if (!products) throw Error('No Items');
 		res.status(200).json(products);
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(400).json({ message: error.message });
 	}
 });
 
@@ -75,7 +72,7 @@ router.get('/:id', async (req, res) => {
 		if (!product) throw Error('No Items');
 		res.status(200).json(product);
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(400).json({ message: error.message });
 	}
 });
 
@@ -96,7 +93,7 @@ router.post('/', upload.single('image'), async (req, res) => {
 		if (!product) throw Error('Something went wrong while saving the products');
 		res.status(200).json(product);
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(400).json({ message: error.message });
 	}
 });
 
@@ -111,7 +108,7 @@ router.delete('/:id', async (req, res) => {
 		if (!product) throw Error('No post found');
 		res.status(200).json({ success: true });
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(400).json({ message: error.message });
 	}
 });
 
@@ -127,7 +124,7 @@ router.patch('/:id', async (req, res) => {
 			throw Error('Something went wrong while updating the product!');
 		res.status(200).json({ success: true });
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(400).json({ message: error.message });
 	}
 });
 

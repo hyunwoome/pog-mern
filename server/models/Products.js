@@ -25,13 +25,4 @@ const ProductsSchema = new Schema(
 	{ timestamps: true },
 );
 
-ProductsSchema.virtual('commentPublished', {
-	ref: 'Comment', // Model
-	localField: '_id',
-	foreignField: 'products',
-});
-
-ProductsSchema.set('toObject', { virtual: true });
-ProductsSchema.set('toJSON', { virtual: true });
-
 module.exports = mongoose.model('Products', ProductsSchema);

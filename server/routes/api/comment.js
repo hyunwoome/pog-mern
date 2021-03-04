@@ -12,10 +12,10 @@ const router = express.Router();
  */
 router.get('/', async (req, res) => {
 	try {
-		const comment = new Comment(req.body);
+		const comment = await Comment.find();
 		res.status(200).json(comment);
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(400).json({ message: error.message });
 	}
 });
 
@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
 		await products.save();
 		res.status(200).json(products);
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(400).json({ message: error.message });
 	}
 });
 
