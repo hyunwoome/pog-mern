@@ -6,7 +6,6 @@ export default function Products() {
 	return (
 		<Container>
 			<h1>{name}</h1>
-			11
 		</Container>
 	);
 }
