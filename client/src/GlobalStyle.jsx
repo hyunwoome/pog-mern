@@ -24,6 +24,7 @@ export const GlobalStyles = createGlobalStyle`
     --color-background-base: #f2f2f2;
     --color-background: #fff;
     --color-border: #e6e6e6;
+    --color-button-disable: #bbbbbb;
     --color-button-default: #707070;
     --color-button-primary: #2296f2;
     --color-button-secondary:#ff81aa;

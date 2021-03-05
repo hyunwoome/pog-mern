@@ -77,7 +77,7 @@ const List = styled.li`
 	&:hover {
 		opacity: 0.7;
 	}
-	color: var(--color-button-default);
+	color: var(--color-button-disable);
 	${({ active }) =>
 		active &&
 		`

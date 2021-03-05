@@ -13,11 +13,11 @@ export default function BackButton({ title, icon }) {
 		<Container>
 			<Wrapper>
 				<GoBackButton onClick={backButton}>
-					<ArrowBackIosRoundedIcon />
+					<ArrowBackIosRoundedIcon fontSize="small" />
 				</GoBackButton>
 				<Title>{title}</Title>
 				<GoButton>
-					<ICON />
+					<ICON fontSize="small" />
 				</GoButton>
 			</Wrapper>
 		</Container>
@@ -30,7 +30,7 @@ BackButton.defaultProps = {
 
 const Container = styled.div`
 	width: 100%;
-	height: 48px;
+	height: 42px;
 	position: fixed;
 `;
 
@@ -53,15 +53,17 @@ const GoBackButton = styled.button`
 	background-color: var(--color-background);
 	padding: 0;
 	text-align: left;
-`;
-
-const GoButton = styled(GoBackButton)`
-	text-align: right;
+	cursor: pointer;
 `;
 
 const Title = styled.h1`
 	flex: 2;
 	height: 100%;
 	text-align: center;
-	line-height: 3rem;
+	line-height: 2.5rem;
+	font-weight: 500;
+`;
+
+const GoButton = styled(GoBackButton)`
+	text-align: right;
 `;
