@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 
 export default function Products() {
-	const { name } = useParams();
+	const { country } = useParams();
 	return (
 		<Container>
-			<h1>{name}</h1>
+			<h1>{country}</h1>
 		</Container>
 	);
 }

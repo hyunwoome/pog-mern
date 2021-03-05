@@ -1,4 +1,4 @@
-import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Calendar from './pages/Calendar';
@@ -10,7 +10,7 @@ import BottomNav from './components/common/BottomNav';
 import Footer from './components/sections/Footer';
 
 function App() {
-	const { path } = useRouteMatch();
+	// const { path } = useRouteMatch();
 	return (
 		<>
 			<Switch>

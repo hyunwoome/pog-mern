@@ -28,6 +28,7 @@ const CalButton = styled(Button)`
 	text-align: left;
 	color: #ababab;
 	border: 1px solid #e6e6e6;
+	outline: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

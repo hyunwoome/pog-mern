@@ -61,6 +61,7 @@ const Button = styled.button`
 	width: 100%;
 	height: 100%;
 	border: 0;
+	outline: 0;
 	background-color: var(--color-background);
 	letter-spacing: 1px;
 	font-size: var(--font-button);
