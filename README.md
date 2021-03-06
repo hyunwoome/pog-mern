@@ -15,6 +15,7 @@
 - `mongoose`
 - `nodemon`
 - `dotenv`
+- `multer`
 
 ## Database
 
