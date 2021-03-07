@@ -9,6 +9,13 @@
 - `@material-ui/core`
 - `@material-ui/icons`
 
+### Typescript
+
+- `typescript`
+- `@types/react-router-dom`
+- `@types/styled-components`
+- `@types/material-ui`
+
 ## Server
 
 - `Express.js`
