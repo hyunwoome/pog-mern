@@ -19,6 +19,7 @@ export default function Products() {
 		case 'sale':
 			productCountry = '초특가';
 			region = [
+				'전체보기',
 				'태국',
 				'중국',
 				'일본',
@@ -71,7 +72,6 @@ export default function Products() {
 
 const Container = styled.div`
 	max-width: 1024px;
-	height: 90vh;
 	margin: auto;
 	padding-top: 3rem;
 	background-color: var(--color-background);

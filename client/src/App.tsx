@@ -6,8 +6,6 @@ import Menu from './pages/Menu';
 import Account from './pages/Account';
 import NotFound from './pages/NotFound';
 import Products from './pages/Products';
-import BottomNav from './components/common/BottomNav';
-import Footer from './components/sections/Footer';
 
 function App() {
 	return (
@@ -23,8 +21,6 @@ function App() {
 				</Route>
 				<Route component={NotFound} />
 			</Switch>
-			<BottomNav />
-			<Footer />
 		</>
 	);
 }

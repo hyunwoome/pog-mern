@@ -78,4 +78,5 @@ const Title = styled.h1`
 
 const GoButton = styled(GoBackButton)`
 	text-align: right;
+	color: var(--color-button-primary);
 `;
