@@ -72,12 +72,12 @@ const Button = styled.button`
 	}
 `;
 
-const ActiveButton = styled(Button)`
+const ActiveButton = styled(Button)<{ active: boolean }>`
 	color: var(--color-button-default);
 	${({ active }) => active && `color: var(--color-button-secondary);`};
 `;
 
-const TabIndicator = styled.span`
+const TabIndicator = styled.span<{ active: boolean }>`
 	width: 100%;
 	height: 3px;
 	position: absolute;

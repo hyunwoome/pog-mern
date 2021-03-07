@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export default function BaseContainer({ children }) {
+interface Props {
+	children: string | JSX.Element | JSX.Element[];
+}
+
+export default function BaseContainer({ children }: Props) {
 	return <Container>{children}</Container>;
 }
 
