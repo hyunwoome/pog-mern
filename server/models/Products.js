@@ -4,8 +4,9 @@ const { Schema } = require('mongoose');
 const ProductsSchema = new Schema(
 	{
 		country: { type: String, required: true }, // 국가
-		location: { type: String, required: true }, // 지역
-		title: { type: String, required: true }, // 제목 (CC, 중요)
+		region: { type: String, required: true }, // 지역
+		sale: { type: Boolean }, // 초특가 유무
+		title: { type: String, required: true }, // 제목 (CC)
 		price: { type: Number, required: true }, // 가격
 		desc: { type: String, required: true }, // 설명
 		image: { type: String, required: true }, // 이미지
