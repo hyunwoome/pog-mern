@@ -17,6 +17,7 @@ export const GlobalStyles = createGlobalStyle`
     // * Global Variable //
 
     // ! Font
+    --font-title: 1.15rem;
     --font-button: 0.875rem;
     --font-sm: 0.75rem; 
 
