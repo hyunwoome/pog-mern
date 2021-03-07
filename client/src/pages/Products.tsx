@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import BackButton from '../components/common/BackButton';
 import NotFound from './NotFound';
 import ProductRegion from '../components/common/ProductRegion';
+import ProductGrid from '../components/sections/ProductGrid';
 
 interface Country {
 	country: string;
@@ -65,6 +66,7 @@ export default function Products() {
 			<BackButton title={`${productCountry} 골프상품`} />
 			<Container>
 				<ProductRegion region={region} />
+				<ProductGrid />
 			</Container>
 		</>
 	);

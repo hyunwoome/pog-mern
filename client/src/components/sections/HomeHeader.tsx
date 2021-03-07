@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 import Button from '../common/Button';
 import CalendarButton from '../common/CalendarButton';
+import { Link } from 'react-router-dom';
 
 export default function HomeHeader() {
 	return (
 		<Container>
 			<FirstContainer>
 				<LogoContainer>
-					<LogoText>PRIDE OF GOLF</LogoText>
+					<LogoText>
+						<Link to="/">PRIDE OF GOLF</Link>
+					</LogoText>
 				</LogoContainer>
 				<ButtonContainer>
 					<Button color="primary" href="/login">
