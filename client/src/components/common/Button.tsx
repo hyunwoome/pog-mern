@@ -2,9 +2,10 @@ import styled, { css } from 'styled-components';
 import { useHistory } from 'react-router-dom';
 
 interface Props {
-	children: JSX.Element;
-	href: string;
-	variant: string;
+	children?: string | JSX.Element | JSX.Element[];
+	href?: string;
+	variant?: string;
+	color?: string;
 }
 
 export default function Button({ children, ...props }: Props) {

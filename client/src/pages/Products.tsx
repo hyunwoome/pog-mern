@@ -3,8 +3,12 @@ import { useParams } from 'react-router-dom';
 import BackButton from '../components/common/BackButton';
 import NotFound from './NotFound';
 
+interface Country {
+	country: string;
+}
+
 export default function Products() {
-	const { country } = useParams();
+	const { country }: Country = useParams();
 	let productCountry;
 	switch (country) {
 		case 'sale':

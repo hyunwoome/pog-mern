@@ -1,12 +1,6 @@
 import BaseContainer from '../components/containers/BaseContainer';
 import BackButton from '../components/common/BackButton';
 
-// interface BackButton {
-// 	title: String;
-// 	icon: String;
-// 	buttonHandle: String;
-// }
-
 export default function Menu() {
 	return (
 		<>
