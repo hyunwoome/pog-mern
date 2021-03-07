@@ -10,7 +10,6 @@ import BottomNav from './components/common/BottomNav';
 import Footer from './components/sections/Footer';
 
 function App() {
-	// const { path } = useRouteMatch();
 	return (
 		<>
 			<Switch>

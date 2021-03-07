@@ -3,7 +3,17 @@ import ArrowBackIosRoundedIcon from '@material-ui/icons/ArrowBackIosRounded';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import { useHistory } from 'react-router-dom';
 
-export default function BackButton({ title, icon, buttonHandle }) {
+interface BackButtonTypes {
+	title: string;
+	icon: string;
+	buttonHandle: string;
+}
+
+export default function BackButton({
+	title,
+	icon,
+	buttonHandle,
+}: BackButtonTypes) {
 	const ICON = icon;
 	const history = useHistory();
 
@@ -24,7 +34,7 @@ export default function BackButton({ title, icon, buttonHandle }) {
 				<Title>{title}</Title>
 				<GoButton>
 					{buttonHandle ? (
-						<ICON fontSize="small" onClick={buttonHandle} />
+						<ICON />
 					) : (
 						<HomeRoundedIcon fontSize="small" onClick={homeButton} />
 					)}
