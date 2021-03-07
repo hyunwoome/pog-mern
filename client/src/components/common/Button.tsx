@@ -1,7 +1,13 @@
 import styled, { css } from 'styled-components';
 import { useHistory } from 'react-router-dom';
 
-export default function Button({ children, ...props }) {
+interface Props {
+	children: JSX.Element;
+	href: string;
+	variant: string;
+}
+
+export default function Button({ children, ...props }: Props) {
 	let history = useHistory();
 	const pushButton = () => {
 		history.push(`${props.href}`);
@@ -22,7 +28,7 @@ export default function Button({ children, ...props }) {
 
 const Container = styled.div``;
 
-const BaseButton = styled.button`
+const BaseButton = styled.button<Props>`
 	/* Base */
 	padding: 8px 16px 6px 16px;
 	border: 0;

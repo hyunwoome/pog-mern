@@ -70,7 +70,7 @@ const UnList = styled.ul`
 	padding: 6px 0px;
 `;
 
-const List = styled.li`
+const List = styled.li<{ active: boolean }>`
 	width: 100%;
 	text-align: center;
 	font-size: var(--font-sm);
