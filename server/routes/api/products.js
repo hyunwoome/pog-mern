@@ -84,9 +84,20 @@ router.get('/:id', async (req, res) => {
 router.post('/', upload.single('image'), async (req, res) => {
 	const newProduct = new Products({
 		_id: new mongoose.Types.ObjectId(),
-		title: req.body.title,
 		country: req.body.country,
-		// image: req.file.path,
+		region: req.body.region,
+		sale: req.body.sale,
+		title: req.body.title,
+		price: req.body.price,
+		desc: req.body.desc,
+		image: req.file.path,
+		period: req.body.period,
+		personnel: req.body.personnel,
+		manager: req.body.manager,
+		phone: req.body.phone,
+		include: req.body.include,
+		notInclude: req.body.notInclude,
+		etcItem: req.body.etcItem,
 	});
 	try {
 		const product = await newProduct.save();
@@ -105,7 +116,7 @@ router.post('/', upload.single('image'), async (req, res) => {
 router.delete('/:id', async (req, res) => {
 	try {
 		const product = await Products.findByIdAndDelete(req.params.id);
-		if (!product) throw Error('No post found');
+		if (!product) throw Error('No product found');
 		res.status(200).json({ success: true });
 	} catch (error) {
 		res.status(400).json({ message: error.message });

@@ -2,6 +2,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const multer = require('multer');
+const cors = require('cors');
 
 require('dotenv').config();
 const { MONGO_URI } = require('./config');
@@ -14,8 +15,10 @@ const commentRoutes = require('./routes/api/comment');
 
 // Middleware
 
+app.use(cors()); // CORS
 app.use(express.json()); // BodyParser
-app.use('/uploads', express.static('uploads')); // Static
+// app.use('/uploads', express.static('uploads')); // Static
+app.use('/uploads', express.static('uploads'));
 
 // Connect to MongoDB Atlas
 mongoose
