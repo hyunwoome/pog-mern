@@ -8,6 +8,7 @@
 - `styled-reset`
 - `@material-ui/core`
 - `@material-ui/icons`
+- `axios`
 
 ### Typescript
 
@@ -23,6 +24,7 @@
 - `nodemon`
 - `dotenv`
 - `multer`
+- `cors`
 
 ## Database
 
