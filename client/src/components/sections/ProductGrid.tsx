@@ -34,17 +34,25 @@ export default function ProductGrid() {
 	if (loading) return <div>상품이 준비중입니다.</div>;
 	if (error) return <div>상품을 불러올 수 없습니다.</div>;
 	if (!product) return null;
-
 	return (
 		<Container>
 			{product.map((item: Item) => (
-				<li key={item._id}>
-					<img src={`http://localhost:5000/${item.image}`} alt="상품이미지" />
-					{item.country}
-					{item.region}
-					{item.title}
-					{item.price}
-				</li>
+				<CardContainer key={item._id}>
+					<ImageContainer>
+						<img src={`http://localhost:5000/${item.image}`} alt="상품이미지" />
+					</ImageContainer>
+					<ContentContainer>
+						<ContentHeader>
+							<ContentCountry>{item.country}</ContentCountry>
+							<ContentRegion>{item.region}</ContentRegion>
+						</ContentHeader>
+						<ContentTitle>{item.title}</ContentTitle>
+						<ContentBottom>
+							<ContentPrice>{item.price.toLocaleString('ko-KR')}</ContentPrice>
+							<ContentWon>원</ContentWon>
+						</ContentBottom>
+					</ContentContainer>
+				</CardContainer>
 			))}
 		</Container>
 	);
@@ -55,20 +63,70 @@ const Container = styled.section`
 	background-color: var(--color-background);
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	/* grid-template-rows: repeat(1, minmax(300px, auto)); */
+	padding: var(--padding-sm) var(--padding-laptop);
 	@media screen and (max-width: 600px) {
 		grid-template-columns: 1fr;
+		padding: var(--padding-sm) var(--padding-mobile);
+	}
+	gap: 1.3rem;
+`;
+
+const CardContainer = styled.div`
+	border: 1px solid var(--color-border);
+	border-radius: 5px;
+`;
+
+const ImageContainer = styled.div`
+	max-height: 200px;
+	background-color: var(--color-background);
+	overflow: hidden;
+	& > img {
+		max-width: 100%;
+		height: auto;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
 	}
 `;
 
-const CardContainer = styled.div``;
+const ContentContainer = styled.div`
+	padding: 1rem;
+	height: 8rem;
+	box-shadow: 0.5px 0.5px 10px var(--color-border);
+`;
 
-const ImageContainer = styled.div``;
+const ContentHeader = styled.header`
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
+`;
 
-const ContentContainer = styled.div``;
+const ContentCountry = styled.h2`
+	font-size: var(--font-md);
+	margin-right: 0.3rem;
+`;
 
-const ContentHeader = styled.header``;
+const ContentRegion = styled.h4`
+	font-size: var(--font-md);
+	font-weight: 300;
+`;
 
-const ContentTitle = styled.h1``;
+const ContentTitle = styled.h1`
+	font-size: var(--font-lg);
+	font-weight: 500;
+`;
 
-const ContentPrice = styled.p``;
+const ContentBottom = styled.div`
+	margin-top: 2rem;
+	text-align: right;
+`;
+
+const ContentPrice = styled.p`
+	font-size: var(--font-lg);
+	font-weight: 500;
+	display: inline;
+	margin-right: 0.1rem;
+`;
+
+const ContentWon = styled.span`
+	font-size: var(--font-sm);
+`;

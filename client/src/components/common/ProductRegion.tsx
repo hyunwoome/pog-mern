@@ -9,23 +9,26 @@ export default function ProductRegion({ region }: Props) {
 	const [active, setActive] = useState(region[0]);
 
 	return (
-		<Container>
-			<Header>
-				<HeaderTitle>지역별 모아보기</HeaderTitle>
-			</Header>
-			<List>
-				{region.map((item: string) => (
-					<ListItem key={item}>
-						<ActiveButton
-							onClick={() => setActive(item)}
-							active={active === item}
-						>
-							{item}
-						</ActiveButton>
-					</ListItem>
-				))}
-			</List>
-		</Container>
+		<>
+			<Container>
+				<Header>
+					<HeaderTitle>지역별 모아보기</HeaderTitle>
+				</Header>
+				<List>
+					{region.map((item: string) => (
+						<ListItem key={item}>
+							<ActiveButton
+								onClick={() => setActive(item)}
+								active={active === item}
+							>
+								{item}
+							</ActiveButton>
+						</ListItem>
+					))}
+				</List>
+			</Container>
+			<RegionTitle>{active}</RegionTitle>
+		</>
 	);
 }
 
@@ -73,5 +76,15 @@ const ListItem = styled.li`
 	width: 49%;
 	&:nth-child(2n) {
 		margin-left: auto;
+	}
+`;
+
+const RegionTitle = styled.h1`
+	position: sticky;
+	top: 42px;
+	background-color: var(--color-background);
+	padding: var(--padding-sm) var(--padding-laptop);
+	@media screen and (max-width: 600px) {
+		padding: var(--padding-sm) var(--padding-mobile);
 	}
 `;

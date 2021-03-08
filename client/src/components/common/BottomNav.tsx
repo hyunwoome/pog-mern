@@ -65,7 +65,7 @@ const UnList = styled.ul`
 	align-items: center;
 	background-color: var(--color-background);
 	max-width: 1024px;
-	margin: auto;
+	margin: 0px;
 	border-top: 1px solid var(--color-border);
 	padding: 6px 0px;
 `;

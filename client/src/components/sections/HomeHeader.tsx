@@ -13,9 +13,12 @@ export default function HomeHeader() {
 					</LogoText>
 				</LogoContainer>
 				<ButtonContainer>
-					<Button color="primary" href="/login">
-						로그인
+					<Button color="secondary" variant="outlined" href="/product">
+						골프상품 더보기
 					</Button>
+					<LoginButton color="primary" href="/login">
+						로그인
+					</LoginButton>
 				</ButtonContainer>
 			</FirstContainer>
 			<SecondContainer>
@@ -50,9 +53,19 @@ const LogoContainer = styled.div``;
 const LogoText = styled.h3`
 	font-family: 'Racing Sans One', cursive;
 	font-size: 24px;
+	margin-right: 1rem;
+`;
+
+const LoginButton = styled(Button)`
+	margin-left: 1rem;
+	@media screen and (max-width: 600px) {
+		display: none;
+	}
 `;
 
 const ButtonContainer = styled.div`
 	flex: 2;
 	text-align: right;
+	display: flex;
+	justify-content: flex-end;
 `;

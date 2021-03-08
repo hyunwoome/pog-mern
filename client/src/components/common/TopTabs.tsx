@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import ProductGrid from '../sections/ProductGrid';
 
 export default function TopTabs() {
 	const product = [
@@ -17,21 +18,24 @@ export default function TopTabs() {
 	const [active, setActive] = useState(product[0]);
 
 	return (
-		<Container>
-			<UnList>
-				{product.map((title) => (
-					<List key={title}>
-						<ActiveButton
-							onClick={() => setActive(title)}
-							active={active === title}
-						>
-							{title}
-						</ActiveButton>
-						<TabIndicator active={active === title} />
-					</List>
-				))}
-			</UnList>
-		</Container>
+		<>
+			<Container>
+				<UnList>
+					{product.map((title) => (
+						<List key={title}>
+							<ActiveButton
+								onClick={() => setActive(title)}
+								active={active === title}
+							>
+								{title}
+							</ActiveButton>
+							<TabIndicator active={active === title} />
+						</List>
+					))}
+				</UnList>
+			</Container>
+			<ProductGrid />
+		</>
 	);
 }
 
