@@ -62,8 +62,11 @@ const Container = styled.section`
 	width: 100%;
 	background-color: var(--color-background);
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	padding: var(--padding-sm) var(--padding-laptop);
+	@media screen and (max-width: 800px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
 	@media screen and (max-width: 600px) {
 		grid-template-columns: 1fr;
 		padding: var(--padding-sm) var(--padding-mobile);
@@ -72,7 +75,7 @@ const Container = styled.section`
 `;
 
 const CardContainer = styled.div`
-	border: 1px solid var(--color-border);
+	border: 0.1px solid var(--color-border);
 	border-radius: 5px;
 `;
 
@@ -80,6 +83,7 @@ const ImageContainer = styled.div`
 	max-height: 200px;
 	background-color: var(--color-background);
 	overflow: hidden;
+	border-radius: 5px;
 	& > img {
 		max-width: 100%;
 		height: auto;

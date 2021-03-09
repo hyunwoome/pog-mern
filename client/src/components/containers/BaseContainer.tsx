@@ -9,7 +9,8 @@ export default function BaseContainer({ children }: Props) {
 }
 
 const Container = styled.div`
-	max-width: 1024px;
+	/* max-width: 1024px; */
+	max-width: 768px;
 	margin: auto;
 	height: 150vh; /* 임시 */
 `;

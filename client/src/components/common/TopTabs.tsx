@@ -5,19 +5,6 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import { Link } from 'react-router-dom';
 
 export default function TopTabs() {
-	const product = [
-		'초특가',
-		'태국',
-		'중국',
-		'일본',
-		'베트남',
-		'필리핀',
-		'괌&사이판',
-		'기타아시아',
-		'국내투어',
-		'지방출발',
-	];
-
 	const productList = [
 		{
 			title: '초특가',
@@ -62,8 +49,6 @@ export default function TopTabs() {
 	];
 	const [active, setActive] = useState(productList[0].title);
 	const [link, setLink] = useState(productList[0].href);
-
-	const onHandleButton = () => {};
 
 	return (
 		<>
