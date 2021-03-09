@@ -43,6 +43,7 @@ const Container = styled.div`
 	width: 100%;
 	height: 42px;
 	position: fixed;
+	z-index: 1000;
 `;
 
 const Wrapper = styled.div`

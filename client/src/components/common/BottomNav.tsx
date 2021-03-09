@@ -74,9 +74,6 @@ const List = styled.li<{ active: boolean }>`
 	width: 100%;
 	text-align: center;
 	font-size: var(--font-sm);
-	&:hover {
-		opacity: 0.7;
-	}
 	color: var(--color-button-disable);
 	${({ active }) =>
 		active &&

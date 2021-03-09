@@ -27,7 +27,9 @@ export default function ProductRegion({ region }: Props) {
 					))}
 				</List>
 			</Container>
-			<RegionTitle>{active}</RegionTitle>
+			<RegionTitleContainer>
+				<RegionTitle>{active}</RegionTitle>
+			</RegionTitleContainer>
 		</>
 	);
 }
@@ -79,10 +81,16 @@ const ListItem = styled.li`
 	}
 `;
 
+const RegionTitleContainer = styled.div`
+	background-color: var(--color-background-base);
+	width: 100%;
+	height: 100%;
+	display: flex;
+`;
+
 const RegionTitle = styled.h1`
 	position: sticky;
-	top: 42px;
-	background-color: var(--color-background);
+	font-size: var(--font-sm);
 	padding: var(--padding-sm) var(--padding-laptop);
 	@media screen and (max-width: 600px) {
 		padding: var(--padding-sm) var(--padding-mobile);

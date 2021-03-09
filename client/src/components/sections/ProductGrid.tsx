@@ -101,12 +101,12 @@ const ContentHeader = styled.header`
 `;
 
 const ContentCountry = styled.h2`
-	font-size: var(--font-md);
+	font-size: var(--font-button);
 	margin-right: 0.3rem;
 `;
 
 const ContentRegion = styled.h4`
-	font-size: var(--font-md);
+	font-size: var(--font-button);
 	font-weight: 300;
 `;
 
