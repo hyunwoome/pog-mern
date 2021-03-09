@@ -83,7 +83,7 @@ router.get('/:id', async (req, res) => {
  */
 router.post('/', upload.single('image'), async (req, res) => {
 	const newProduct = new Products({
-		_id: new mongoose.Types.ObjectId(),
+		id: new mongoose.Types.ObjectId(),
 		country: req.body.country,
 		region: req.body.region,
 		sale: req.body.sale,
@@ -99,6 +99,7 @@ router.post('/', upload.single('image'), async (req, res) => {
 		notInclude: req.body.notInclude,
 		etcItem: req.body.etcItem,
 	});
+	// const newProduct = new Products(req.body, req.file);
 	try {
 		const product = await newProduct.save();
 		if (!product) throw Error('Something went wrong while saving the products');
@@ -130,7 +131,7 @@ router.delete('/:id', async (req, res) => {
  */
 router.patch('/:id', async (req, res) => {
 	try {
-		const product = await product.findByIdAndUpdate(req.params.id, req.body);
+		const product = await Products.findByIdAndUpdate(req.params.id, req.body);
 		if (!product)
 			throw Error('Something went wrong while updating the product!');
 		res.status(200).json({ success: true });
