@@ -24,10 +24,10 @@ const Container = styled.div`
 
 const CalButton = styled.button`
 	width: 100%;
-	padding: 8px 16px 6px 16px;
+	padding: 8px 14px 6px 14px;
 	border-radius: 5px;
 	text-align: left;
-	color: #ababab;
+	color: #919191;
 	border: 1px solid #e6e6e6;
 	outline: 0;
 	display: flex;
@@ -35,8 +35,6 @@ const CalButton = styled.button`
 	align-items: center;
 	font-size: var(--font-button);
 	box-shadow: none;
+	background-color: #f8f8f8;
 	cursor: pointer;
-	&:hover {
-		opacity: 0.7;
-	}
 `;

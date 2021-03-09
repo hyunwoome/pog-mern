@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Button from '../common/Button';
 import CalendarButton from '../common/CalendarButton';
 import { Link } from 'react-router-dom';
 
@@ -13,17 +12,9 @@ export default function HomeHeader() {
 					</LogoText>
 				</LogoContainer>
 				<ButtonContainer>
-					<Button color="secondary" variant="outlined" href="/product">
-						골프상품 더보기
-					</Button>
-					<LoginButton color="primary" href="/login">
-						로그인
-					</LoginButton>
+					<CalendarButton />
 				</ButtonContainer>
 			</FirstContainer>
-			<SecondContainer>
-				<CalendarButton />
-			</SecondContainer>
 		</Container>
 	);
 }
@@ -31,7 +22,7 @@ export default function HomeHeader() {
 const Container = styled.header`
 	background-color: var(--color-background);
 	width: 100%;
-	height: 98px;
+	height: 60px;
 	padding: var(--padding-sm) var(--padding-laptop) 0px var(--padding-laptop);
 	@media screen and (max-width: 600px) {
 		padding: var(--padding-sm) var(--padding-mobile) 0px var(--padding-mobile);
@@ -46,21 +37,17 @@ const FirstContainer = styled.div`
 	align-items: center;
 `;
 
-const SecondContainer = styled.div``;
-
-const LogoContainer = styled.div``;
-
-const LogoText = styled.h3`
-	font-family: 'Racing Sans One', cursive;
-	font-size: 24px;
-	margin-right: 1rem;
+const LogoContainer = styled.div`
+	margin-right: 0.5rem;
 `;
 
-const LoginButton = styled(Button)`
-	margin-left: 1rem;
-	@media screen and (max-width: 600px) {
-		display: none;
-	}
+const LogoText = styled.h3`
+	/* font-family: 'Racing Sans One', cursive; */
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	font-style: italic;
+	font-size: var(--font-lg);
+	margin-right: 1rem;
 `;
 
 const ButtonContainer = styled.div`
