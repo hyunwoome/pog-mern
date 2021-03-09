@@ -13,8 +13,10 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: var(--color-background-base);
     font-family: 'Apple SD Gothic Neo','Noto Sans KR', Roboto,'맑은고딕','Nanum Gothic',sans-serif;
-  
-    // * Global Variable //
+
+
+    // ! Width 
+    --width-base: 728px;
 
     // ! Font
     --font-xl: 1.3rem;
@@ -29,8 +31,8 @@ export const GlobalStyles = createGlobalStyle`
     --color-border: #e6e6e6;
     --color-button-disable: #bbbbbb;
     --color-button-default: #707070;
-    --color-button-primary: #2296f2;
-    --color-button-secondary:#ff81aa;
+    --color-button-primary: #ff395c;
+    --color-button-secondary:#ff395c;
     --color-font-gray: #666666;
 
     // ! Paddings

@@ -1,25 +1,31 @@
 import styled from 'styled-components';
 import CalendarButton from '../common/CalendarButton';
 import { Link } from 'react-router-dom';
+import TopTabs from '../common/TopTabs';
 
 export default function HomeHeader() {
 	return (
-		<Container>
-			<FirstContainer>
-				<LogoContainer>
-					<LogoText>
-						<Link to="/">PRIDE OF GOLF</Link>
-					</LogoText>
-				</LogoContainer>
-				<ButtonContainer>
-					<CalendarButton />
-				</ButtonContainer>
-			</FirstContainer>
-		</Container>
+		<HeaderContainer>
+			<Container>
+				<FirstContainer>
+					<LogoContainer>
+						<LogoText>
+							<Link to="/">PRIDE OF GOLF</Link>
+						</LogoText>
+					</LogoContainer>
+					<ButtonContainer>
+						<CalendarButton />
+					</ButtonContainer>
+				</FirstContainer>
+			</Container>
+			<TopTabs />
+		</HeaderContainer>
 	);
 }
 
-const Container = styled.header`
+const HeaderContainer = styled.header``;
+
+const Container = styled.div`
 	background-color: var(--color-background);
 	width: 100%;
 	height: 60px;

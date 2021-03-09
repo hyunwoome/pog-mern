@@ -63,7 +63,7 @@ const Container = styled.aside`
 
 const UnList = styled.ul`
 	display: flex;
-	max-width: 768px;
+	max-width: 728px;
 	margin: 0 auto;
 	padding: 6px 0px;
 `;
@@ -82,8 +82,9 @@ const List = styled.li<{ active: boolean }>`
 
 const TabLink = styled(Link)``;
 
-const IconWrapper = styled.div`
-	margin-bottom: 2px;
-`;
+const IconWrapper = styled.div``;
 
-const TitleWrapper = styled.span``;
+const TitleWrapper = styled.span`
+	font-weight: 500;
+	font-size: 11px;
+`;

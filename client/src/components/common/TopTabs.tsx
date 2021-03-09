@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import ProductGrid from '../sections/ProductGrid';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import { Link } from 'react-router-dom';
+import GridTitle from '../common/GridTitle';
 
 export default function TopTabs() {
 	const productList = [
@@ -70,12 +69,7 @@ export default function TopTabs() {
 					))}
 				</UnList>
 			</Container>
-			{/* <MoreContainer>
-				<MoreCustomLink to={`/products${link}`}>
-					<MoreLink>해당 상품 더보기 &nbsp;</MoreLink>
-					<ArrowForwardIosIcon style={{ fontSize: 11 }} />
-				</MoreCustomLink>
-			</MoreContainer> */}
+			<GridTitle title={active} href={`/products${link}`} />
 			<ProductGrid />
 		</>
 	);
@@ -83,8 +77,6 @@ export default function TopTabs() {
 
 const Container = styled.div`
 	width: 100%;
-	position: sticky;
-	top: 0;
 	background-color: var(--color-background);
 	overflow: scroll;
 	margin-bottom: 1rem;
@@ -110,14 +102,16 @@ const Button = styled.button`
 	border: 0;
 	outline: 0;
 	background-color: var(--color-background);
-	font-size: var(--font-button);
 	padding: 0 var(--padding-mobile);
 	cursor: pointer;
+	font-size: 13px;
+	letter-spacing: 0.5px;
 `;
 
 const ActiveButton = styled(Button)<{ active: boolean }>`
 	color: var(--color-button-default);
 	${({ active }) => active && `color: var(--color-button-secondary);`};
+	${({ active }) => active && `font-weight: 600;`};
 `;
 
 const TabIndicator = styled.span<{ active: boolean }>`
@@ -130,26 +124,4 @@ const TabIndicator = styled.span<{ active: boolean }>`
 	left: 0;
 	${({ active }) =>
 		active && `background-color: var(--color-button-secondary);`}
-`;
-
-const MoreContainer = styled.div`
-	width: 100%;
-	height: 40px;
-	background-color: var(--color-background-base);
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	padding: 0 var(--padding-laptop);
-	@media screen and (max-width: 600px) {
-		padding: 0 var(--padding-mobile);
-	}
-`;
-
-const MoreCustomLink = styled(Link)`
-	display: flex;
-	align-items: center;
-`;
-
-const MoreLink = styled.h1`
-	font-size: var(--font-sm);
 `;

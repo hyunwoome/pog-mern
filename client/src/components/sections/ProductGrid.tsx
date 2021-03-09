@@ -66,14 +66,16 @@ export default function ProductGrid() {
 }
 
 const Container = styled.section`
-	width: 100%;
+	/* width: 100%; */
+	max-width: 728px;
+	margin: 0 auto;
 	background-color: var(--color-background);
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	padding: var(--padding-sm) var(--padding-laptop);
+	padding: 0 var(--padding-laptop) var(--padding-sm) var(--padding-laptop);
 	@media screen and (max-width: 600px) {
 		grid-template-columns: 1fr;
-		padding: var(--padding-sm) var(--padding-mobile);
+		padding: 0 var(--padding-mobile) var(--padding-sm) var(--padding-mobile);
 	}
 	gap: 1.3rem;
 `;
