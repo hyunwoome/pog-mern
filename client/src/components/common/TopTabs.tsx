@@ -70,12 +70,12 @@ export default function TopTabs() {
 					))}
 				</UnList>
 			</Container>
-			<MoreContainer>
+			{/* <MoreContainer>
 				<MoreCustomLink to={`/products${link}`}>
 					<MoreLink>해당 상품 더보기 &nbsp;</MoreLink>
 					<ArrowForwardIosIcon style={{ fontSize: 11 }} />
 				</MoreCustomLink>
-			</MoreContainer>
+			</MoreContainer> */}
 			<ProductGrid />
 		</>
 	);
@@ -87,6 +87,7 @@ const Container = styled.div`
 	top: 0;
 	background-color: var(--color-background);
 	overflow: scroll;
+	margin-bottom: 1rem;
 `;
 
 const UnList = styled.ul`

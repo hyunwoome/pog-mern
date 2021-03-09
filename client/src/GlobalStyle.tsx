@@ -12,13 +12,13 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     background-color: var(--color-background-base);
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Apple SD Gothic Neo','Noto Sans KR', Roboto,'맑은고딕','Nanum Gothic',sans-serif;
   
     // * Global Variable //
 
     // ! Font
     --font-xl: 1.3rem;
-    --font-lg: 1.1rem;
+    --font-lg: 1.125rem;
     --font-md: 1rem;
     --font-sm: 0.75rem; 
     --font-button: 0.875rem;

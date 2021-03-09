@@ -52,21 +52,19 @@ export default function BottomNav() {
 	);
 }
 
-const Container = styled.div`
-	background-color: var(--color-background-base);
+const Container = styled.aside`
+	background-color: var(--color-background);
+	border-top: 1px solid var(--color-border);
 	position: fixed;
+	right: 0;
 	bottom: 0;
-	width: 100%;
+	left: 0;
 `;
 
 const UnList = styled.ul`
 	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	background-color: var(--color-background);
-	max-width: 1024px;
-	margin: 0px;
-	border-top: 1px solid var(--color-border);
+	max-width: 768px;
+	margin: 0 auto;
 	padding: 6px 0px;
 `;
 

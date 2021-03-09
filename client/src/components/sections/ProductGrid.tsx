@@ -35,26 +35,33 @@ export default function ProductGrid() {
 	if (error) return <div>상품을 불러올 수 없습니다.</div>;
 	if (!product) return null;
 	return (
-		<Container>
-			{product.map((item: Item) => (
-				<CardContainer key={item._id}>
-					<ImageContainer>
-						<img src={`http://localhost:5000/${item.image}`} alt="상품이미지" />
-					</ImageContainer>
-					<ContentContainer>
-						<ContentHeader>
-							<ContentCountry>{item.country}</ContentCountry>
-							<ContentRegion>{item.region}</ContentRegion>
-						</ContentHeader>
-						<ContentTitle>{item.title}</ContentTitle>
-						<ContentBottom>
-							<ContentPrice>{item.price.toLocaleString('ko-KR')}</ContentPrice>
-							<ContentWon>원</ContentWon>
-						</ContentBottom>
-					</ContentContainer>
-				</CardContainer>
-			))}
-		</Container>
+		<>
+			<Container>
+				{product.map((item: Item) => (
+					<CardContainer key={item._id}>
+						<ImageContainer>
+							<img
+								src={`http://localhost:5000/${item.image}`}
+								alt="상품이미지"
+							/>
+						</ImageContainer>
+						<ContentContainer>
+							<ContentHeader>
+								<ContentCountry>{item.country}</ContentCountry>
+								<ContentRegion>{item.region}</ContentRegion>
+							</ContentHeader>
+							<ContentTitle>{item.title}</ContentTitle>
+							<ContentBottom>
+								<ContentPrice>
+									{item.price.toLocaleString('ko-KR')}
+								</ContentPrice>
+								<ContentWon>원</ContentWon>
+							</ContentBottom>
+						</ContentContainer>
+					</CardContainer>
+				))}
+			</Container>
+		</>
 	);
 }
 
@@ -62,11 +69,8 @@ const Container = styled.section`
 	width: 100%;
 	background-color: var(--color-background);
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	padding: var(--padding-sm) var(--padding-laptop);
-	@media screen and (max-width: 800px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
 	@media screen and (max-width: 600px) {
 		grid-template-columns: 1fr;
 		padding: var(--padding-sm) var(--padding-mobile);
@@ -83,7 +87,8 @@ const ImageContainer = styled.div`
 	max-height: 200px;
 	background-color: var(--color-background);
 	overflow: hidden;
-	border-radius: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	& > img {
 		max-width: 100%;
 		height: auto;
@@ -115,8 +120,8 @@ const ContentRegion = styled.h4`
 `;
 
 const ContentTitle = styled.h1`
-	font-size: var(--font-lg);
-	font-weight: 500;
+	font-size: var(--font-md);
+	font-weight: 700;
 `;
 
 const ContentBottom = styled.div`
@@ -126,7 +131,7 @@ const ContentBottom = styled.div`
 
 const ContentPrice = styled.p`
 	font-size: var(--font-lg);
-	font-weight: 500;
+	font-weight: 700;
 	display: inline;
 	margin-right: 0.1rem;
 `;

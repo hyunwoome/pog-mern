@@ -29,3 +29,7 @@
 ## Database
 
 - `MongoDB Atlas`
+
+---
+
+- Thumbnail : 640 x 400
