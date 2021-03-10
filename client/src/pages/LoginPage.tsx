@@ -1,9 +1,9 @@
 import BaseContainer from '../components/containers/BaseContainer';
 
-export default function Calendar() {
+export default function LoginPage() {
 	return (
 		<>
-			<BaseContainer>캘린더 페이지</BaseContainer>
+			<BaseContainer>로그인 페이지</BaseContainer>
 		</>
 	);
 }

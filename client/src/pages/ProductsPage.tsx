@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import BackButton from '../components/common/BackButton';
-import NotFound from './NotFound';
+import NotFoundPage from './NotFoundPage';
 import ProductRegion from '../components/common/ProductRegion';
 import ProductGrid from '../components/sections/ProductGrid';
 
@@ -9,7 +9,7 @@ interface Country {
 	country: string;
 }
 
-export default function Products() {
+export default function ProductsPage() {
 	const { country }: Country = useParams();
 	let productCountry;
 	let region;
@@ -58,7 +58,7 @@ export default function Products() {
 		// 	productCountry = '지방에서 출발하는';
 		// 	break;
 		default:
-			return <NotFound />;
+			return <NotFoundPage />;
 	}
 
 	return (

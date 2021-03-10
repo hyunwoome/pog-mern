@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import BackButton from '../components/common/BackButton';
 
-export default function NotFound() {
+export default function NotFoundPage() {
 	return (
 		<>
 			<BackButton />

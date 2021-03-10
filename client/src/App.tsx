@@ -1,25 +1,25 @@
 import { Route, Switch } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Calendar from './pages/Calendar';
-import Menu from './pages/Menu';
-import Account from './pages/Account';
-import NotFound from './pages/NotFound';
-import Products from './pages/Products';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import CalendarPage from './pages/CalendarPage';
+import MenuPage from './pages/MenuPage';
+import AccountPage from './pages/AccountPage';
+import NotFoundPage from './pages/NotFoundPage';
+import ProductsPage from './pages/ProductsPage';
 
 function App() {
 	return (
 		<>
 			<Switch>
-				<Route path="/" exact component={Home} />
-				<Route path="/login" component={Login} />
-				<Route path="/menu" component={Menu} />
-				<Route path="/account" component={Account} />
-				<Route path="/calendar" component={Calendar} />
+				<Route path="/" exact component={HomePage} />
+				<Route path="/login" component={LoginPage} />
+				<Route path="/menu" component={MenuPage} />
+				<Route path="/account" component={AccountPage} />
+				<Route path="/calendar" component={CalendarPage} />
 				<Route path="/products/:country">
-					<Products />
+					<ProductsPage />
 				</Route>
-				<Route component={NotFound} />
+				<Route component={NotFoundPage} />
 			</Switch>
 		</>
 	);

@@ -21,7 +21,7 @@ export default function BackButton({ title, Icon, buttonHandle }: Props) {
 	};
 
 	return (
-		<Container>
+		<StyledContainer>
 			<Wrapper>
 				<GoBackButton onClick={backButton}>
 					<ArrowBackIosRoundedIcon fontSize="small" />
@@ -35,11 +35,11 @@ export default function BackButton({ title, Icon, buttonHandle }: Props) {
 					)}
 				</GoButton>
 			</Wrapper>
-		</Container>
+		</StyledContainer>
 	);
 }
 
-const Container = styled.div`
+const StyledContainer = styled.div`
 	width: 100%;
 	height: 42px;
 	position: fixed;

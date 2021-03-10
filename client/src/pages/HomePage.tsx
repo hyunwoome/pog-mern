@@ -4,7 +4,7 @@ import BottomNav from '../components/common/BottomNav';
 import Footer from '../components/sections/Footer';
 import ProductGrid from '../components/sections/ProductGrid';
 
-export default function Home() {
+export default function HomePage() {
 	return (
 		<>
 			<BaseContainer>
