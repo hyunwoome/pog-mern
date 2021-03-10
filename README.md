@@ -2,17 +2,18 @@
 
 ## Client
 
+- `TypeScript`
 - `create-react-app`
 - `react-router-dom`
+- `react-helmet-async`
 - `styled-components`
 - `styled-reset`
 - `@material-ui/core`
 - `@material-ui/icons`
 - `axios`
 
-### Typescript
+### TypeScript
 
-- `typescript`
 - `@types/react-router-dom`
 - `@types/styled-components`
 - `@types/material-ui`
