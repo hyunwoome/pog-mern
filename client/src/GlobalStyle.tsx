@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     background-color: var(--color-background-base);
-    font-family: 'Apple SD Gothic Neo','Noto Sans KR', Roboto,'맑은고딕','Nanum Gothic',sans-serif;
+    font-family: 'Apple SD Gothic Neo', Roboto,'맑은고딕','Nanum Gothic',sans-serif;
 
 
     // ! Width 
@@ -24,6 +24,13 @@ export const GlobalStyles = createGlobalStyle`
     --font-md: 1rem;
     --font-sm: 0.75rem; 
     --font-button: 0.875rem;
+
+    --font-xs: 0.625rem; // Sub
+    --font-sm: 0.75rem   // Button
+    --font-md: 0.875rem  // Product Title
+    --font-lg: 1rem      // Price
+    --font-xl: 1.125rem  // MenuTitle
+    --font-xxl: 1.25rem  // Title
 
     // ! Colors
     --color-background-base: #f2f2f2;

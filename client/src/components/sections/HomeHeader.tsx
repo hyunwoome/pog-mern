@@ -5,7 +5,7 @@ import TopTabs from '../common/TopTabs';
 
 export default function HomeHeader() {
 	return (
-		<HeaderContainer>
+		<>
 			<Container>
 				<FirstContainer>
 					<LogoContainer>
@@ -19,20 +19,19 @@ export default function HomeHeader() {
 				</FirstContainer>
 			</Container>
 			<TopTabs />
-		</HeaderContainer>
+		</>
 	);
 }
-
-const HeaderContainer = styled.header``;
 
 const Container = styled.div`
 	background-color: var(--color-background);
 	width: 100%;
-	height: 60px;
-	padding: var(--padding-sm) var(--padding-laptop) 0px var(--padding-laptop);
+	height: 52px;
+	/* padding: var(--padding-sm) var(--padding-laptop) 0px var(--padding-laptop);
 	@media screen and (max-width: 600px) {
 		padding: var(--padding-sm) var(--padding-mobile) 0px var(--padding-mobile);
-	}
+	} */
+	padding: 0 16px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -41,6 +40,7 @@ const Container = styled.div`
 const FirstContainer = styled.div`
 	display: flex;
 	align-items: center;
+	height: 100%;
 `;
 
 const LogoContainer = styled.div`

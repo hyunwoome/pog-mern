@@ -20,11 +20,13 @@ export default function CalendarButton() {
 
 const Container = styled.div`
 	width: 100%;
+	height: 100%;
 `;
 
 const CalButton = styled.button`
 	width: 100%;
-	padding: 8px 14px 6px 14px;
+	height: 100%;
+	padding: 4px 14px 4px 14px;
 	border-radius: 5px;
 	text-align: left;
 	color: #919191;

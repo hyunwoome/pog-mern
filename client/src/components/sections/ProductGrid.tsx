@@ -66,7 +66,6 @@ export default function ProductGrid() {
 }
 
 const Container = styled.section`
-	/* width: 100%; */
 	max-width: 728px;
 	margin: 0 auto;
 	background-color: var(--color-background);

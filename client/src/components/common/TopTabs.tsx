@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import ProductGrid from '../sections/ProductGrid';
 import GridTitle from '../common/GridTitle';
 
 export default function TopTabs() {
@@ -70,7 +69,6 @@ export default function TopTabs() {
 				</UnList>
 			</Container>
 			<GridTitle title={active} href={`/products${link}`} />
-			<ProductGrid />
 		</>
 	);
 }
@@ -80,6 +78,8 @@ const Container = styled.div`
 	background-color: var(--color-background);
 	overflow: scroll;
 	margin-bottom: 1rem;
+	position: sticky;
+	top: 0;
 `;
 
 const UnList = styled.ul`
