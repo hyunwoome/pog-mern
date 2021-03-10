@@ -14,10 +14,6 @@ export const GlobalStyles = createGlobalStyle`
     background-color: var(--color-background-base);
     font-family: 'Apple SD Gothic Neo', Roboto,'맑은고딕','Nanum Gothic',sans-serif;
 
-
-    // ! Width 
-    --width-base: 728px;
-
     // ! Font
     --font-xl: 1.3rem;
     --font-lg: 1.125rem;
@@ -25,6 +21,7 @@ export const GlobalStyles = createGlobalStyle`
     --font-sm: 0.75rem; 
     --font-button: 0.875rem;
 
+    // 아직 미적용
     --font-xs: 0.625rem;  // Sub
     --font-sm: 0.75rem;   // Button
     --font-md: 0.875rem;  // Product Title

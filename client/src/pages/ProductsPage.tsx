@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { useParams } from 'react-router-dom';
-import BackButton from '../components/common/BackButton';
 import NotFoundPage from './NotFoundPage';
+import BaseTemplate from '../components/base/BaseTemplate';
+import BackButton from '../components/common/BackButton';
 import ProductRegion from '../components/common/ProductRegion';
 import ProductGrid from '../components/sections/ProductGrid';
+import { useParams } from 'react-router-dom';
 
 interface Country {
 	country: string;
@@ -64,17 +65,17 @@ export default function ProductsPage() {
 	return (
 		<>
 			<BackButton title={`${productCountry} 골프상품`} />
-			<Container>
-				<ProductRegion region={region} />
-				<ProductGrid />
-			</Container>
+			<BaseTemplate>
+				<StyledContainer>
+					<ProductRegion region={region} />
+					<ProductGrid />
+				</StyledContainer>
+			</BaseTemplate>
 		</>
 	);
 }
 
-const Container = styled.div`
-	max-width: 1024px;
-	margin: auto;
+const StyledContainer = styled.div`
 	padding-top: 3rem;
 	background-color: var(--color-background);
 `;

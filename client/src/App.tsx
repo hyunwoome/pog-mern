@@ -1,4 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import CalendarPage from './pages/CalendarPage';
@@ -10,6 +11,10 @@ import ProductsPage from './pages/ProductsPage';
 function App() {
 	return (
 		<>
+			<Helmet>
+				<title>PRIDE OF GOLF</title>
+				<meta name="description" content="해외골프는 프라이드 오브 골프에서" />
+			</Helmet>
 			<Switch>
 				<Route path="/" exact component={HomePage} />
 				<Route path="/login" component={LoginPage} />

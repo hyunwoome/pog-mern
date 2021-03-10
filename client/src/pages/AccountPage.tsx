@@ -1,4 +1,4 @@
-import BaseContainer from '../components/containers/BaseContainer';
+import BaseContainer from '../components/base/BaseTemplate';
 
 export default function AccountPage() {
 	return (

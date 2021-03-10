@@ -1,4 +1,4 @@
-import BaseContainer from '../components/containers/BaseContainer';
+import BaseContainer from '../components/base/BaseTemplate';
 import BackButton from '../components/common/BackButton';
 
 export default function MenuPage() {
