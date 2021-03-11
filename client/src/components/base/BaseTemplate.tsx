@@ -9,8 +9,9 @@ export default function BaseTemplate({ children }: Props) {
 }
 
 const StyledContainer = styled.div`
+	background-color: var(--color-background-base);
 	max-width: 728px;
-	margin: auto;
-	/* 임시 */
-	height: 100vh;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 0 1rem;
 `;

@@ -66,15 +66,14 @@ export default function ProductGrid() {
 }
 
 const Container = styled.section`
+	background-color: var(--color-background);
 	max-width: 728px;
 	margin: 0 auto;
-	background-color: var(--color-background);
+	padding: 16px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	padding: 0 var(--padding-laptop) var(--padding-sm) var(--padding-laptop);
 	@media screen and (max-width: 600px) {
 		grid-template-columns: 1fr;
-		padding: 0 var(--padding-mobile) var(--padding-sm) var(--padding-mobile);
 	}
 	gap: 1.3rem;
 `;

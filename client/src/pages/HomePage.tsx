@@ -1,18 +1,22 @@
-import BaseTemplate from '../components/base/BaseTemplate';
-import HomeHeader from '../components/sections/HomeHeader';
+import styled from 'styled-components';
+import HomeHeader from '../components/home/HomeHeader';
 import BottomNav from '../components/common/BottomNav';
-import Footer from '../components/sections/Footer';
-import ProductGrid from '../components/sections/ProductGrid';
+import Footer from '../components/section/SectionFooter';
+import ProductGrid from '../components/product/ProductGrid';
 
 export default function HomePage() {
 	return (
 		<>
-			<BaseTemplate>
-				<HomeHeader />
+			<HomeHeader />
+			<StyledContainer>
 				<ProductGrid />
 				<BottomNav />
 				<Footer />
-			</BaseTemplate>
+			</StyledContainer>
 		</>
 	);
 }
+
+const StyledContainer = styled.div`
+	padding-top: 9.1rem;
+`;

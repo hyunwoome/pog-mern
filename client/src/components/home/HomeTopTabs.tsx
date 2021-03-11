@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import GridTitle from '../common/GridTitle';
+import ProductGridHeader from '../product/ProductGridHeader';
 
 export default function TopTabs() {
 	const productList = [
@@ -67,27 +67,31 @@ export default function TopTabs() {
 						</List>
 					))}
 				</UnList>
+				<ProductGridHeader title={active} href={`/products${link}`} />
 			</Container>
-			<GridTitle title={active} href={`/products${link}`} />
 		</>
 	);
 }
 
 const Container = styled.div`
-	width: 100%;
 	background-color: var(--color-background);
-	overflow: scroll;
+	border-bottom: 1px solid var(--color-border);
+	width: 100%;
 	margin-bottom: 1rem;
-	position: sticky;
-	top: 0;
+	padding: 0 16px;
+	top: 50px;
+	overflow: scroll;
+	position: fixed;
 `;
 
 const UnList = styled.ul`
+	max-width: 728px;
+	height: 45px;
+	padding-top: 4px;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 45px;
-	padding: 4px 16px 0 16px;
 `;
 
 const List = styled.li`
@@ -102,7 +106,7 @@ const Button = styled.button`
 	border: 0;
 	outline: 0;
 	background-color: var(--color-background);
-	padding: 0 var(--padding-mobile);
+	padding: 0 12px;
 	cursor: pointer;
 	font-size: 13px;
 	letter-spacing: 0.5px;

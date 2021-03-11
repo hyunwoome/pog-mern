@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import CalendarButton from '../common/CalendarButton';
+import CalendarButton from './HomeCalButton';
 import { Link } from 'react-router-dom';
-import TopTabs from '../common/TopTabs';
+import TopTabs from './HomeTopTabs';
 
 export default function HomeHeader() {
 	return (
@@ -23,24 +23,23 @@ export default function HomeHeader() {
 	);
 }
 
-const Container = styled.div`
+const Container = styled.section`
 	background-color: var(--color-background);
 	width: 100%;
 	height: 52px;
-	/* padding: var(--padding-sm) var(--padding-laptop) 0px var(--padding-laptop);
-	@media screen and (max-width: 600px) {
-		padding: var(--padding-sm) var(--padding-mobile) 0px var(--padding-mobile);
-	} */
+	margin: 0;
 	padding: 0 16px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	z-index: 10;
 `;
 
-const FirstContainer = styled.div`
+const FirstContainer = styled.header`
+	max-width: 728px;
+	height: 100%;
+	margin: 0 auto;
 	display: flex;
 	align-items: center;
-	height: 100%;
 `;
 
 const LogoContainer = styled.div`

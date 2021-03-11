@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import NotFoundPage from './NotFoundPage';
 import BaseTemplate from '../components/base/BaseTemplate';
-import BackButton from '../components/common/BackButton';
-import ProductRegion from '../components/common/ProductRegion';
-import ProductGrid from '../components/sections/ProductGrid';
+import ButtonBack from '../components/common/ButtonBack';
+import ProductRegion from '../components/product/ProductRegion';
+import ProductGrid from '../components/product/ProductGrid';
 import { useParams } from 'react-router-dom';
 
 interface Country {
 	country: string;
 }
 
-export default function ProductsPage() {
+export default function ProductPage() {
 	const { country }: Country = useParams();
 	let productCountry;
 	let region;
@@ -64,7 +64,7 @@ export default function ProductsPage() {
 
 	return (
 		<>
-			<BackButton title={`${productCountry} 골프상품`} />
+			<ButtonBack title={`${productCountry} 골프상품`} />
 			<BaseTemplate>
 				<StyledContainer>
 					<ProductRegion region={region} />

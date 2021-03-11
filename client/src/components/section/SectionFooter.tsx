@@ -63,10 +63,6 @@ const Wrapper = styled.div`
 	font-weight: 300;
 	color: var(--color-font-gray);
 	border-top: 1px solid var(--color-border);
-	padding: var(--padding-sm) var(--padding-laptop) 0px var(--padding-laptop);
-	@media screen and (max-width: 600px) {
-		padding: var(--padding-sm) var(--padding-mobile) 0px var(--padding-mobile);
-	}
 `;
 
 const UnList = styled.ul`

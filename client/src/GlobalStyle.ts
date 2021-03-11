@@ -12,7 +12,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     background-color: var(--color-background-base);
-    font-family: 'Apple SD Gothic Neo', Roboto,'맑은고딕','Nanum Gothic',sans-serif;
+    font-family: 'Apple SD Gothic Neo', Roboto, Arial,'맑은고딕','Nanum Gothic',sans-serif;
+    color: var(--color-font-default);
 
     // ! Font
     --font-xl: 1.3rem;
@@ -29,6 +30,14 @@ export const GlobalStyles = createGlobalStyle`
     --font-xl: 1.125rem;  // MenuTitle
     --font-xxl: 1.25rem;  // Title
 
+    // ! Font Weight
+    --weight-xs: 300; // Disabled
+    --weight-sm: 400; // Grid Title, Sub
+    --weight-md: 500;
+    --weight-lg: 600;
+    --weight-xl: 700; // Title, Price
+    --weight-xxl : 800;
+
     // ! Colors
     --color-background-base: #f2f2f2;
     --color-background: #fff;
@@ -38,6 +47,17 @@ export const GlobalStyles = createGlobalStyle`
     --color-button-primary: #ff395c;
     --color-button-secondary:#ff395c;
     --color-font-gray: #666666;
+
+    // ! Colors
+    --color-background-base: #f2f2f2;
+    --color-background: #fff;
+    --color-font-default: #1a1a1a;
+    --color-font-gray: #666666;
+    --color-border: #e6e6e6;
+    --color-button-disable: #bbbbbb;
+    --color-button-default: #707070;
+    --color-button-primary: #0152cc;
+    --color-button-secondary:#ff395c;
 
     // ! Paddings
     --padding-sm: 0.875rem;

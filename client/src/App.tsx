@@ -6,7 +6,7 @@ import CalendarPage from './pages/CalendarPage';
 import MenuPage from './pages/MenuPage';
 import AccountPage from './pages/AccountPage';
 import NotFoundPage from './pages/NotFoundPage';
-import ProductsPage from './pages/ProductsPage';
+import ProductPage from './pages/ProductPage';
 
 function App() {
 	return (
@@ -22,7 +22,7 @@ function App() {
 				<Route path="/account" component={AccountPage} />
 				<Route path="/calendar" component={CalendarPage} />
 				<Route path="/products/:country">
-					<ProductsPage />
+					<ProductPage />
 				</Route>
 				<Route component={NotFoundPage} />
 			</Switch>

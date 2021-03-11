@@ -1,5 +1,5 @@
 import BaseContainer from '../components/base/BaseTemplate';
-import BackButton from '../components/common/BackButton';
+import BackButton from '../components/common/ButtonBack';
 
 export default function MenuPage() {
 	return (

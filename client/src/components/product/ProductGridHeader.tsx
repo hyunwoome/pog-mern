@@ -18,10 +18,10 @@ export default function GridTitle({ title, href }: Props) {
 const Container = styled.header`
 	background-color: var(--color-background);
 	max-width: 728px;
-	margin: auto;
 	height: 50px;
+	padding: 14px 4px 8px 4px;
+	margin: auto;
 	display: flex;
-	padding: 14px 26px 8px 26px;
 	justify-content: space-between;
 	align-items: center;
 `;
