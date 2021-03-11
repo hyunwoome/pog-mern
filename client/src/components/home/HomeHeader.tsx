@@ -6,24 +6,24 @@ import TopTabs from './HomeTopTabs';
 export default function HomeHeader() {
 	return (
 		<>
-			<Container>
-				<FirstContainer>
-					<LogoContainer>
-						<LogoText>
+			<StyledContainer>
+				<StyledHeader>
+					<StyledLogoContainer>
+						<StyledLogoText>
 							<Link to="/">PRIDE OF GOLF</Link>
-						</LogoText>
-					</LogoContainer>
-					<ButtonContainer>
+						</StyledLogoText>
+					</StyledLogoContainer>
+					<StyledButtonContainer>
 						<CalendarButton />
-					</ButtonContainer>
-				</FirstContainer>
-			</Container>
+					</StyledButtonContainer>
+				</StyledHeader>
+			</StyledContainer>
 			<TopTabs />
 		</>
 	);
 }
 
-const Container = styled.section`
+const StyledContainer = styled.section`
 	background-color: var(--color-background);
 	width: 100%;
 	height: 52px;
@@ -34,7 +34,7 @@ const Container = styled.section`
 	z-index: 10;
 `;
 
-const FirstContainer = styled.header`
+const StyledHeader = styled.header`
 	max-width: 728px;
 	height: 100%;
 	margin: 0 auto;
@@ -42,20 +42,19 @@ const FirstContainer = styled.header`
 	align-items: center;
 `;
 
-const LogoContainer = styled.div`
+const StyledLogoContainer = styled.div`
 	margin-right: 0.5rem;
 `;
 
-const LogoText = styled.h3`
-	/* font-family: 'Racing Sans One', cursive; */
+const StyledLogoText = styled.h3`
+	font-size: var(--font-xl);
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 800;
 	font-style: italic;
-	font-size: var(--font-lg);
 	margin-right: 1rem;
 `;
 
-const ButtonContainer = styled.div`
+const StyledButtonContainer = styled.div`
 	flex: 2;
 	text-align: right;
 	display: flex;

@@ -11,16 +11,16 @@ export default function ProductGridTitle() {
 	return (
 		<>
 			{location.pathname !== `/product/${country}` ? (
-				<Container>
-					<Title>해외골프상품</Title>
-					<CustomLink to="/productpage">상품 전체보기</CustomLink>
-				</Container>
+				<StyledContainer>
+					<StyledTitle>해외골프상품</StyledTitle>
+					<StyledCustomLink to="/productpage">상품 전체보기</StyledCustomLink>
+				</StyledContainer>
 			) : null}
 		</>
 	);
 }
 
-const Container = styled.header`
+const StyledContainer = styled.header`
 	background-color: var(--color-background);
 	max-width: 728px;
 	height: 50px;
@@ -31,13 +31,13 @@ const Container = styled.header`
 	align-items: center;
 `;
 
-const Title = styled.h2`
-	font-size: var(--font-lg);
+const StyledTitle = styled.h2`
+	font-size: var(--font-xl);
 	font-weight: 700;
 `;
 
-const CustomLink = styled(Link)`
-	font-size: var(--font-button);
+const StyledCustomLink = styled(Link)`
+	font-size: var(--font-md);
 	font-weight: 700;
 	color: #0152cc;
 `;

@@ -48,28 +48,28 @@ export default function TopTabs() {
 
 	return (
 		<>
-			<Container>
-				<UnList>
+			<StyledContainer>
+				<StyledUnList>
 					{productList.map((item) => (
-						<List key={item.title}>
-							<ActiveButton
+						<StyledList key={item.title}>
+							<StyledActiveButton
 								onClick={() => {
 									setActive(item.title);
 								}}
 								active={active === item.title}
 							>
 								{item.title}
-							</ActiveButton>
-							<TabIndicator active={active === item.title} />
-						</List>
+							</StyledActiveButton>
+							<StyledTabIndicator active={active === item.title} />
+						</StyledList>
 					))}
-				</UnList>
-			</Container>
+				</StyledUnList>
+			</StyledContainer>
 		</>
 	);
 }
 
-const Container = styled.div`
+const StyledContainer = styled.div`
 	background-color: var(--color-background);
 	border-bottom: 1px solid var(--color-border);
 	width: 100%;
@@ -80,7 +80,7 @@ const Container = styled.div`
 	position: fixed;
 `;
 
-const UnList = styled.ul`
+const StyledUnList = styled.ul`
 	max-width: 728px;
 	height: 45px;
 	padding-top: 4px;
@@ -90,31 +90,31 @@ const UnList = styled.ul`
 	align-items: center;
 `;
 
-const List = styled.li`
+const StyledList = styled.li`
 	height: 100%;
 	flex-shrink: 0;
 	position: relative;
 `;
 
-const Button = styled.button`
+const StyledButton = styled.button`
+	background-color: var(--color-background);
 	width: 100%;
 	height: 100%;
 	border: 0;
 	outline: 0;
-	background-color: var(--color-background);
 	padding: 0 12px;
 	cursor: pointer;
 	font-size: 13px;
 	letter-spacing: 0.5px;
 `;
 
-const ActiveButton = styled(Button)<{ active: boolean }>`
+const StyledActiveButton = styled(StyledButton)<{ active: boolean }>`
 	color: var(--color-button-default);
 	${({ active }) => active && `color: var(--color-button-secondary);`};
 	${({ active }) => active && `font-weight: 600;`};
 `;
 
-const TabIndicator = styled.span<{ active: boolean }>`
+const StyledTabIndicator = styled.span<{ active: boolean }>`
 	width: 100%;
 	height: 3px;
 	position: absolute;

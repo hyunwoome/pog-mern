@@ -56,12 +56,12 @@ const StyledContainer = styled.footer`
 `;
 
 const StyledWrapper = styled.div`
+	color: var(--color-font-gray);
 	max-width: 728px;
 	height: 100%;
 	margin: auto;
 	font-size: var(--font-sm);
 	font-weight: 300;
-	color: var(--color-font-gray);
 `;
 
 const StyledUnList = styled.ul`

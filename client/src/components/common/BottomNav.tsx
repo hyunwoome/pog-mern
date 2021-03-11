@@ -33,30 +33,30 @@ export default function BottomNav() {
 	const [active, setActive] = useState(tabTitle[0].title);
 
 	return (
-		<Container>
-			<UnList>
+		<StyledContainer>
+			<StyledUnList>
 				{tabTitle.map((item) => (
-					<List
+					<StyledList
 						key={item.title}
 						onClick={() => setActive(item.title)}
 						active={active === item.title}
 					>
-						<TabLink to={item.href}>
-							<IconWrapper active={active === item.title}>
+						<Link to={item.href}>
+							<StyledIconWrapper active={active === item.title}>
 								{item.icons}
-							</IconWrapper>
-							<TitleWrapper active={active === item.title}>
+							</StyledIconWrapper>
+							<StyledTitleWrapper active={active === item.title}>
 								{item.title}
-							</TitleWrapper>
-						</TabLink>
-					</List>
+							</StyledTitleWrapper>
+						</Link>
+					</StyledList>
 				))}
-			</UnList>
-		</Container>
+			</StyledUnList>
+		</StyledContainer>
 	);
 }
 
-const Container = styled.aside`
+const StyledContainer = styled.aside`
 	background-color: var(--color-background);
 	border-top: 1px solid var(--color-border);
 	position: fixed;
@@ -65,23 +65,21 @@ const Container = styled.aside`
 	left: 0;
 `;
 
-const UnList = styled.ul`
-	display: flex;
+const StyledUnList = styled.ul`
 	max-width: 728px;
 	margin: 0 auto;
 	padding: 6px 0px;
+	display: flex;
 `;
 
-const List = styled.li<{ active: boolean }>`
+const StyledList = styled.li<{ active: boolean }>`
+	color: var(--color-button-disable);
+	font-size: var(--font-sm);
 	width: 100%;
 	text-align: center;
-	font-size: var(--font-sm);
-	color: var(--color-button-disable);
 `;
 
-const TabLink = styled(Link)``;
-
-const IconWrapper = styled.div<{ active: boolean }>`
+const StyledIconWrapper = styled.div<{ active: boolean }>`
 	${({ active }) =>
 		active &&
 		`
@@ -89,7 +87,7 @@ color: var(--color-button-primary);
 `}
 `;
 
-const TitleWrapper = styled.span<{ active: boolean }>`
+const StyledTitleWrapper = styled.span<{ active: boolean }>`
 	font-weight: 500;
 	font-size: 11px;
 	${({ active }) =>

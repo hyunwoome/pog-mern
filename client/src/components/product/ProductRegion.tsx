@@ -45,7 +45,7 @@ const StyledHeader = styled.header`
 `;
 
 const StyledHeaderTitle = styled.h1`
-	font-size: var(--font-title);
+	font-size: var(--font-lg);
 	font-weight: 700;
 	padding-bottom: 0.7rem;
 `;
@@ -57,16 +57,16 @@ const StyledList = styled.ul`
 `;
 
 const StyledActiveButton = styled.button<{ active: boolean }>`
+	background-color: var(--color-background);
+	border-bottom: 1px solid var(--color-border);
+	font-size: var(--font-sm);
 	border: 0;
 	outline: 0;
-	background-color: var(--color-background);
-	font-size: var(--font-sm);
 	padding: 0;
 	width: 100%;
 	height: 100%;
 	text-align: left;
 	cursor: pointer;
-	border-bottom: 1px solid var(--color-border);
 	color: var(--color-button-default);
 	${({ active }) => active && `color: var(--color-button-secondary);`};
 	line-height: 2rem;

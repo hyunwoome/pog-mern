@@ -38,36 +38,36 @@ export default function ProductGrid() {
 	return (
 		<>
 			<ProductGridTitle />
-			<Container>
+			<StyledContainer>
 				{product.map((item: Item) => (
-					<CardContainer key={item._id}>
-						<ImageContainer>
+					<StyledCardContainer key={item._id}>
+						<StyledImageContainer>
 							<img
 								src={`http://localhost:5000/${item.image}`}
 								alt="상품이미지"
 							/>
-						</ImageContainer>
-						<ContentContainer>
-							<ContentHeader>
-								<ContentCountry>{item.country}</ContentCountry>
-								<ContentRegion>{item.region}</ContentRegion>
-							</ContentHeader>
-							<ContentTitle>{item.title}</ContentTitle>
-							<ContentBottom>
-								<ContentPrice>
+						</StyledImageContainer>
+						<StyledContentContainer>
+							<StyledContentHeader>
+								<StyledContentCountry>{item.country}</StyledContentCountry>
+								<StyledContentRegion>{item.region}</StyledContentRegion>
+							</StyledContentHeader>
+							<StyledContentTitle>{item.title}</StyledContentTitle>
+							<StyledContentBottom>
+								<StyledContentPrice>
 									{item.price.toLocaleString('ko-KR')}
-								</ContentPrice>
-								<ContentWon>원</ContentWon>
-							</ContentBottom>
-						</ContentContainer>
-					</CardContainer>
+								</StyledContentPrice>
+								<StyledContentWon>원</StyledContentWon>
+							</StyledContentBottom>
+						</StyledContentContainer>
+					</StyledCardContainer>
 				))}
-			</Container>
+			</StyledContainer>
 		</>
 	);
 }
 
-const Container = styled.section`
+const StyledContainer = styled.section`
 	background-color: var(--color-background);
 	max-width: 728px;
 	margin: 0 auto;
@@ -80,14 +80,14 @@ const Container = styled.section`
 	gap: 1.3rem;
 `;
 
-const CardContainer = styled.div`
+const StyledCardContainer = styled.div`
 	border: 0.1px solid var(--color-border);
 	border-radius: 5px;
 `;
 
-const ImageContainer = styled.div`
-	max-height: 200px;
+const StyledImageContainer = styled.div`
 	background-color: var(--color-background);
+	max-height: 200px;
 	overflow: hidden;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -99,45 +99,45 @@ const ImageContainer = styled.div`
 	}
 `;
 
-const ContentContainer = styled.div`
+const StyledContentContainer = styled.div`
+	box-shadow: 0.5px 0.5px 10px var(--color-border);
 	padding: 1rem;
 	height: 8rem;
-	box-shadow: 0.5px 0.5px 10px var(--color-border);
 `;
 
-const ContentHeader = styled.header`
+const StyledContentHeader = styled.header`
+	margin-bottom: 0.5rem;
 	display: flex;
 	align-items: center;
-	margin-bottom: 0.5rem;
 `;
 
-const ContentCountry = styled.h2`
-	font-size: var(--font-button);
+const StyledContentCountry = styled.h2`
+	font-size: var(--font-md);
 	margin-right: 0.3rem;
 `;
 
-const ContentRegion = styled.h4`
-	font-size: var(--font-button);
+const StyledContentRegion = styled.h4`
+	font-size: var(--font-md);
 	font-weight: 300;
 `;
 
-const ContentTitle = styled.h1`
-	font-size: var(--font-md);
+const StyledContentTitle = styled.h1`
+	font-size: var(--font-lg);
 	font-weight: 700;
 `;
 
-const ContentBottom = styled.div`
+const StyledContentBottom = styled.div`
 	margin-top: 2rem;
 	text-align: right;
 `;
 
-const ContentPrice = styled.p`
-	font-size: var(--font-lg);
+const StyledContentPrice = styled.p`
+	font-size: var(--font-xl);
 	font-weight: 700;
 	display: inline;
 	margin-right: 0.1rem;
 `;
 
-const ContentWon = styled.span`
+const StyledContentWon = styled.span`
 	font-size: var(--font-sm);
 `;

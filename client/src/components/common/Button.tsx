@@ -15,27 +15,26 @@ export default function Button({ children, ...props }: Props) {
 	};
 
 	return (
-		<Container>
+		<StyledContainer>
 			{props.href ? (
-				<BaseButton onClick={pushButton} {...props}>
+				<StyledBaseButton onClick={pushButton} {...props}>
 					{children}
-				</BaseButton>
+				</StyledBaseButton>
 			) : (
-				<BaseButton {...props}>{children}</BaseButton>
+				<StyledBaseButton {...props}>{children}</StyledBaseButton>
 			)}
-		</Container>
+		</StyledContainer>
 	);
 }
 
-const Container = styled.div``;
+const StyledContainer = styled.div``;
 
-const BaseButton = styled.button<Props>`
-	/* Base */
+const StyledBaseButton = styled.button<Props>`
+	font-size: var(--font-button);
 	padding: 8px 16px 6px 16px;
 	border: 0;
 	border-radius: 5px;
 	box-shadow: 0px 1px 3px -1px gray;
-	font-size: var(--font-button);
 	cursor: pointer;
 	&:hover {
 		opacity: 0.7;

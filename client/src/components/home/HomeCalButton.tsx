@@ -9,21 +9,22 @@ export default function CalendarButton() {
 	};
 
 	return (
-		<Container>
-			<CalButton onClick={pushButton}>
+		<StyledContainer>
+			<StyledCalButton onClick={pushButton}>
 				내가찾는 해외골프
 				<SearchRoundedIcon style={{ color: 'black' }} />
-			</CalButton>
-		</Container>
+			</StyledCalButton>
+		</StyledContainer>
 	);
 }
 
-const Container = styled.div`
+const StyledContainer = styled.div`
 	width: 100%;
 	height: 100%;
 `;
 
-const CalButton = styled.button`
+const StyledCalButton = styled.button`
+	font-size: var(--font-md);
 	width: 100%;
 	height: 100%;
 	padding: 4px 14px 4px 14px;
@@ -31,12 +32,11 @@ const CalButton = styled.button`
 	text-align: left;
 	color: #919191;
 	border: 1px solid #e6e6e6;
+	background-color: #f8f8f8;
 	outline: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-size: var(--font-button);
 	box-shadow: none;
-	background-color: #f8f8f8;
 	cursor: pointer;
 `;
