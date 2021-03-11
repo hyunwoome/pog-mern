@@ -1,30 +1,13 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import DataFooter from '../../data/DataFooter';
 
 export default function Footer() {
-	const footerList = [
-		{
-			title: '회사소개',
-			href: '/company',
-		},
-		{
-			title: '개인정보처리방침',
-			href: '/privateinfo',
-		},
-		{
-			title: '여행약관',
-			href: '/policy',
-		},
-		{
-			title: '고객센터',
-			href: '/service',
-		},
-	];
 	return (
 		<StyledContainer>
 			<StyledWrapper>
 				<StyledUnList>
-					{footerList.map((item) => (
+					{DataFooter.map((item) => (
 						<StyledList key={item.title}>
 							<Link to={item.href}>{item.title}</Link>
 						</StyledList>

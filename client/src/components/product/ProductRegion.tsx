@@ -57,10 +57,10 @@ const StyledList = styled.ul`
 `;
 
 const StyledActiveButton = styled.button<{ active: boolean }>`
+	border: 0;
 	background-color: var(--color-background);
 	border-bottom: 1px solid var(--color-border);
 	font-size: var(--font-sm);
-	border: 0;
 	outline: 0;
 	padding: 0;
 	width: 100%;

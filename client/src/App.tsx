@@ -7,6 +7,7 @@ import MenuPage from './pages/MenuPage';
 import AccountPage from './pages/AccountPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ProductPage from './pages/ProductPage';
+import ProductListPage from './pages/ProductListPage';
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 				<Route path="/product/:country">
 					<ProductPage />
 				</Route>
+				<Route path="/productlist" component={ProductListPage} />
 				<Route component={NotFoundPage} />
 			</Switch>
 		</>

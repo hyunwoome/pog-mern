@@ -13,7 +13,7 @@ export default function ProductGridTitle() {
 			{location.pathname !== `/product/${country}` ? (
 				<StyledContainer>
 					<StyledTitle>해외골프상품</StyledTitle>
-					<StyledCustomLink to="/productpage">상품 전체보기</StyledCustomLink>
+					<StyledCustomLink to="/productlist">상품 전체보기</StyledCustomLink>
 				</StyledContainer>
 			) : null}
 		</>

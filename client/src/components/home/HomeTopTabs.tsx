@@ -1,56 +1,15 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import DataProduct from '../../data/DataProduct';
 
 export default function TopTabs() {
-	const productList = [
-		{
-			title: '초특가',
-			href: '/sale',
-		},
-		{
-			title: '태국',
-			href: '/taiwan',
-		},
-		{
-			title: '중국',
-			href: '/china',
-		},
-		{
-			title: '일본',
-			href: '/japan',
-		},
-		{
-			title: '베트남',
-			href: '/vietnam',
-		},
-		{
-			title: '필리핀',
-			href: '/philippines',
-		},
-		{
-			title: '괌&사이판',
-			href: '/guam',
-		},
-		{
-			title: '기타아시아',
-			href: '/asia',
-		},
-		{
-			title: '국내투어',
-			href: '/korea',
-		},
-		{
-			title: '지방출발',
-			href: '/local',
-		},
-	];
-	const [active, setActive] = useState(productList[0].title);
+	const [active, setActive] = useState(DataProduct[0].title);
 
 	return (
 		<>
 			<StyledContainer>
 				<StyledUnList>
-					{productList.map((item) => (
+					{DataProduct.map((item) => (
 						<StyledList key={item.title}>
 							<StyledActiveButton
 								onClick={() => {
