@@ -37,7 +37,7 @@ const StyledContainer = styled.section`
 	background-color: var(--color-background);
 	max-width: 728px;
 	margin: auto;
-	padding: 1rem;
+	padding: 20px;
 `;
 
 const StyledHeader = styled.header`
@@ -46,7 +46,7 @@ const StyledHeader = styled.header`
 
 const StyledHeaderTitle = styled.h1`
 	font-size: var(--font-title);
-	font-weight: 500;
+	font-weight: 700;
 	padding-bottom: 0.7rem;
 `;
 

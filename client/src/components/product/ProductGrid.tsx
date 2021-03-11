@@ -71,7 +71,7 @@ const Container = styled.section`
 	background-color: var(--color-background);
 	max-width: 728px;
 	margin: 0 auto;
-	padding: 0 16px 16px 16px;
+	padding: 0 20px 20px 20px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	@media screen and (max-width: 600px) {

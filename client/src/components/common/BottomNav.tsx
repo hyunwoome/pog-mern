@@ -42,8 +42,12 @@ export default function BottomNav() {
 						active={active === item.title}
 					>
 						<TabLink to={item.href}>
-							<IconWrapper>{item.icons}</IconWrapper>
-							<TitleWrapper>{item.title}</TitleWrapper>
+							<IconWrapper active={active === item.title}>
+								{item.icons}
+							</IconWrapper>
+							<TitleWrapper active={active === item.title}>
+								{item.title}
+							</TitleWrapper>
 						</TabLink>
 					</List>
 				))}
@@ -73,18 +77,24 @@ const List = styled.li<{ active: boolean }>`
 	text-align: center;
 	font-size: var(--font-sm);
 	color: var(--color-button-disable);
-	${({ active }) =>
-		active &&
-		`
-    color: var(--color-button-primary);
-  `}
 `;
 
 const TabLink = styled(Link)``;
 
-const IconWrapper = styled.div``;
+const IconWrapper = styled.div<{ active: boolean }>`
+	${({ active }) =>
+		active &&
+		`
+color: var(--color-button-primary);
+`}
+`;
 
-const TitleWrapper = styled.span`
+const TitleWrapper = styled.span<{ active: boolean }>`
 	font-weight: 500;
 	font-size: 11px;
+	${({ active }) =>
+		active &&
+		`
+    color: var(--color-font-default);
+  `}
 `;

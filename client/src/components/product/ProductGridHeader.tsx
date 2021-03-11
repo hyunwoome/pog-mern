@@ -24,7 +24,7 @@ const Container = styled.header`
 	background-color: var(--color-background);
 	max-width: 728px;
 	height: 50px;
-	padding: 14px 20px 8px 20px;
+	padding: 20px 25px 8px 25px;
 	margin: auto;
 	display: flex;
 	justify-content: space-between;

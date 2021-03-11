@@ -73,5 +73,5 @@ export default function ProductPage() {
 }
 
 const StyledContainer = styled.div`
-	padding-top: 2.6rem;
+	padding-top: 41.6px;
 `;
