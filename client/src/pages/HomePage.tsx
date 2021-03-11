@@ -18,5 +18,5 @@ export default function HomePage() {
 }
 
 const StyledContainer = styled.div`
-	padding-top: 9.1rem;
+	padding-top: 6rem;
 `;

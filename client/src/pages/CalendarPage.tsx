@@ -1,9 +1,10 @@
-import BaseContainer from '../components/base/BaseTemplate';
+import styled from 'styled-components';
 
 export default function CalendarPage() {
 	return (
 		<>
-			<BaseContainer>캘린더 페이지</BaseContainer>
+			<StyledContainer>캘린더 페이지</StyledContainer>
 		</>
 	);
 }
+const StyledContainer = styled.section``;

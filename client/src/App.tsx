@@ -21,7 +21,7 @@ function App() {
 				<Route path="/menu" component={MenuPage} />
 				<Route path="/account" component={AccountPage} />
 				<Route path="/calendar" component={CalendarPage} />
-				<Route path="/products/:country">
+				<Route path="/product/:country">
 					<ProductPage />
 				</Route>
 				<Route component={NotFoundPage} />

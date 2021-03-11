@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import ProductGridTitle from './ProductGridHeader';
 
 interface Item {
 	_id: string;
@@ -36,6 +37,7 @@ export default function ProductGrid() {
 	if (!product) return null;
 	return (
 		<>
+			<ProductGridTitle />
 			<Container>
 				{product.map((item: Item) => (
 					<CardContainer key={item._id}>
@@ -69,7 +71,7 @@ const Container = styled.section`
 	background-color: var(--color-background);
 	max-width: 728px;
 	margin: 0 auto;
-	padding: 16px;
+	padding: 0 16px 16px 16px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	@media screen and (max-width: 600px) {

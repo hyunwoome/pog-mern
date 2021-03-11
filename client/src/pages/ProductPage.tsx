@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import NotFoundPage from './NotFoundPage';
-import BaseTemplate from '../components/base/BaseTemplate';
 import ButtonBack from '../components/common/ButtonBack';
 import ProductRegion from '../components/product/ProductRegion';
 import ProductGrid from '../components/product/ProductGrid';
@@ -65,17 +64,14 @@ export default function ProductPage() {
 	return (
 		<>
 			<ButtonBack title={`${productCountry} 골프상품`} />
-			<BaseTemplate>
-				<StyledContainer>
-					<ProductRegion region={region} />
-					<ProductGrid />
-				</StyledContainer>
-			</BaseTemplate>
+			<StyledContainer>
+				<ProductRegion region={region} />
+				<ProductGrid />
+			</StyledContainer>
 		</>
 	);
 }
 
 const StyledContainer = styled.div`
-	padding-top: 3rem;
-	background-color: var(--color-background);
+	padding-top: 2.6rem;
 `;

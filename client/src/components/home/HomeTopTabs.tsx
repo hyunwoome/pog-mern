@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import ProductGridHeader from '../product/ProductGridHeader';
 
 export default function TopTabs() {
 	const productList = [
@@ -46,7 +45,6 @@ export default function TopTabs() {
 		},
 	];
 	const [active, setActive] = useState(productList[0].title);
-	const [link, setLink] = useState(productList[0].href);
 
 	return (
 		<>
@@ -57,7 +55,6 @@ export default function TopTabs() {
 							<ActiveButton
 								onClick={() => {
 									setActive(item.title);
-									setLink(item.href);
 								}}
 								active={active === item.title}
 							>
@@ -67,7 +64,6 @@ export default function TopTabs() {
 						</List>
 					))}
 				</UnList>
-				<ProductGridHeader title={active} href={`/products${link}`} />
 			</Container>
 		</>
 	);

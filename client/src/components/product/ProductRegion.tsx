@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import ProductRegionTitle from './ProductRegionTitle';
 
 interface Props {
 	region: string[];
@@ -10,55 +11,52 @@ export default function ProductRegion({ region }: Props) {
 
 	return (
 		<>
-			<Container>
-				<Header>
-					<HeaderTitle>지역별 모아보기</HeaderTitle>
-				</Header>
-				<List>
+			<StyledContainer>
+				<StyledHeader>
+					<StyledHeaderTitle>지역별 모아보기</StyledHeaderTitle>
+				</StyledHeader>
+				<StyledList>
 					{region.map((item: string) => (
-						<ListItem key={item}>
-							<ActiveButton
+						<StyledListItem key={item}>
+							<StyledActiveButton
 								onClick={() => setActive(item)}
 								active={active === item}
 							>
 								{item}
-							</ActiveButton>
-						</ListItem>
+							</StyledActiveButton>
+						</StyledListItem>
 					))}
-				</List>
-			</Container>
-			<RegionTitleContainer>
-				<RegionTitle>{active}</RegionTitle>
-			</RegionTitleContainer>
+				</StyledList>
+			</StyledContainer>
+			<ProductRegionTitle active={active} />
 		</>
 	);
 }
 
-const Container = styled.nav`
-	width: 100%;
-	padding: var(--padding-sm) var(--padding-laptop);
-	@media screen and (max-width: 600px) {
-		padding: var(--padding-sm) var(--padding-mobile);
-	}
+const StyledContainer = styled.section`
+	background-color: var(--color-background);
+	max-width: 728px;
+	margin: auto;
+	padding: 1rem;
 `;
 
-const Header = styled.header`
+const StyledHeader = styled.header`
 	border-bottom: 1px solid black;
 `;
 
-const HeaderTitle = styled.h1`
+const StyledHeaderTitle = styled.h1`
 	font-size: var(--font-title);
 	font-weight: 500;
 	padding-bottom: 0.7rem;
 `;
 
-const List = styled.ul`
+const StyledList = styled.ul`
 	display: flex;
 	flex-wrap: wrap;
 	padding-top: 0.2rem;
 `;
 
-const ActiveButton = styled.button<{ active: boolean }>`
+const StyledActiveButton = styled.button<{ active: boolean }>`
 	border: 0;
 	outline: 0;
 	background-color: var(--color-background);
@@ -74,25 +72,9 @@ const ActiveButton = styled.button<{ active: boolean }>`
 	line-height: 2rem;
 `;
 
-const ListItem = styled.li`
+const StyledListItem = styled.li`
 	width: 49%;
 	&:nth-child(2n) {
 		margin-left: auto;
-	}
-`;
-
-const RegionTitleContainer = styled.div`
-	background-color: var(--color-background-base);
-	width: 100%;
-	height: 100%;
-	display: flex;
-`;
-
-const RegionTitle = styled.h1`
-	position: sticky;
-	font-size: var(--font-sm);
-	padding: var(--padding-sm) var(--padding-laptop);
-	@media screen and (max-width: 600px) {
-		padding: var(--padding-sm) var(--padding-mobile);
 	}
 `;

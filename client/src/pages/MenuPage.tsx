@@ -1,11 +1,11 @@
-import BaseContainer from '../components/base/BaseTemplate';
-import BackButton from '../components/common/ButtonBack';
+import styled from 'styled-components';
 
 export default function MenuPage() {
 	return (
 		<>
-			<BackButton title="전체메뉴" />
-			<BaseContainer>메뉴 페이지</BaseContainer>
+			<StyledContainer>메뉴 페이지</StyledContainer>
 		</>
 	);
 }
+
+const StyledContainer = styled.section``;

@@ -1,9 +1,11 @@
-import BaseContainer from '../components/base/BaseTemplate';
+import styled from 'styled-components';
 
 export default function LoginPage() {
 	return (
 		<>
-			<BaseContainer>로그인 페이지</BaseContainer>
+			<StyledContainer>로그인 페이지</StyledContainer>
 		</>
 	);
 }
+
+const StyledContainer = styled.section``;

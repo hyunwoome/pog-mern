@@ -1,17 +1,22 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 
-interface Props {
-	title: string;
-	href: string;
+interface Params {
+	country: string;
 }
 
-export default function GridTitle({ title, href }: Props) {
+export default function ProductGridTitle() {
+	const location = useLocation();
+	const { country }: Params = useParams();
 	return (
-		<Container>
-			<Title>{title}</Title>
-			<CustomLink to={href}>해당상품 더보기</CustomLink>
-		</Container>
+		<>
+			{location.pathname !== `/product/${country}` ? (
+				<Container>
+					<Title>해외골프상품</Title>
+					<CustomLink to="/productpage">상품 전체보기</CustomLink>
+				</Container>
+			) : null}
+		</>
 	);
 }
 
@@ -19,7 +24,7 @@ const Container = styled.header`
 	background-color: var(--color-background);
 	max-width: 728px;
 	height: 50px;
-	padding: 14px 4px 8px 4px;
+	padding: 14px 20px 8px 20px;
 	margin: auto;
 	display: flex;
 	justify-content: space-between;

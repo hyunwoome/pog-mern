@@ -22,54 +22,54 @@ export default function BackButton({ title, Icon, buttonHandle }: Props) {
 
 	return (
 		<StyledContainer>
-			<Wrapper>
-				<GoBackButton onClick={backButton}>
+			<StyledWrapper>
+				<StyledBackButton onClick={backButton}>
 					<ArrowBackIosRoundedIcon fontSize="small" />
-				</GoBackButton>
-				<Title>{title}</Title>
-				<GoButton>
+				</StyledBackButton>
+				<StyledTitle>{title}</StyledTitle>
+				<StyledGoButton>
 					{buttonHandle ? (
 						{ Icon }
 					) : (
 						<HomeRoundedIcon fontSize="small" onClick={homeButton} />
 					)}
-				</GoButton>
-			</Wrapper>
+				</StyledGoButton>
+			</StyledWrapper>
 		</StyledContainer>
 	);
 }
 
 const StyledContainer = styled.div`
+	background-color: var(--color-background);
+	border-bottom: 1px solid var(--color-border);
 	width: 100%;
 	height: 42px;
 	position: fixed;
 	z-index: 1000;
 `;
 
-const Wrapper = styled.div`
+const StyledWrapper = styled.div`
 	max-width: 728px;
 	height: 100%;
 	margin: auto;
-	background-color: var(--color-background);
+	padding: 0 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 1rem;
-	border-bottom: 1px solid var(--color-border);
 `;
 
-const GoBackButton = styled.button`
+const StyledBackButton = styled.button`
+	background-color: var(--color-background);
+	height: 100%;
+	padding: 0;
 	border: 0;
 	outline: 0;
-	height: 100%;
 	flex: 1;
-	background-color: var(--color-background);
-	padding: 0;
 	text-align: left;
 	cursor: pointer;
 `;
 
-const Title = styled.h1`
+const StyledTitle = styled.h1`
 	flex: 2;
 	height: 100%;
 	text-align: center;
@@ -77,7 +77,7 @@ const Title = styled.h1`
 	font-weight: 500;
 `;
 
-const GoButton = styled(GoBackButton)`
-	text-align: right;
+const StyledGoButton = styled(StyledBackButton)`
 	color: var(--color-button-primary);
+	text-align: right;
 `;
